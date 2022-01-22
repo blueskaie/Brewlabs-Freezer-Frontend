@@ -74,7 +74,7 @@
                     {{ swapAmountHuman }} 
                     <v-spacer></v-spacer>
                     <img 
-                    src="@/assets/img/UNCX_fill.svg" 
+                    src="@/assets/img/BF_fill.png" 
                     width="32px"
                     class="mr-1">
                     UNCX

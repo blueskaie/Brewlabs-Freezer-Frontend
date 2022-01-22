@@ -176,7 +176,7 @@
               </div>
 
               <div class="textFaint--text caption mb-8">
-                Please be aware only the univ2 tokens are locked. Not the actual dollar value. This changes as people trade. More liquidity tokens are also minted as people add liquidity to the pool.
+                This liquidity pair is locked and its locked value is subject to changes in market price of the tokens within this pair.
               </div>
             </div>
 

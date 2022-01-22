@@ -16,13 +16,13 @@
       </div>
 
       <div class="mb-2">
-        Use the locker to prove to investors you have locked liquidity. If you are not a token developer, this section is almost definitely not for you.
+        Welcome to the Brewlabs Freezer where you easily lock your liquidity tokens securely in our timelock contracts.
+        If you need to every access locked liquidity we offer a defrost service through a due dillgence check on your project.
       </div>
       <div>
-        Our lockers offer
+        Lock features include:
         <ul>
-          <li>Lock splitting</li>
-          <li>Liquidity Migration</li>
+          <li>Lock of liquidity token</li>
           <li>Relocking</li>
           <li>Lock ownership transfer</li>
         </ul>

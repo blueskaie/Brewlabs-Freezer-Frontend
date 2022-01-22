@@ -315,7 +315,7 @@
 
             <div class="text-center mt-10">
               <img 
-              src="@/assets/img/icons/padlock.svg" 
+              src="@/assets/img/icons/padlock.png" 
               height="40px"
               width="40px"
               class="greyscale">
@@ -362,7 +362,7 @@
 
               <div class="text-center mt-10">
                 <img 
-                src="@/assets/img/icons/padlock.svg" 
+                src="@/assets/img/icons/padlock.png" 
                 height="40px"
                 width="40px"
                 class="greyscale">

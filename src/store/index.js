@@ -7,8 +7,8 @@ import SETTINGS from '@/store/settings'
 Vue.use(Vuex)
 
 // SETTINGS - CHANGE ALL
-const NETWORK = 'Mainnet' // Hardcoded (wont change) // options: Ganache, Mainnet, Kovan, BSC_MAINNET, XDAI
-const EXCHANGE = 'Uniswap V2' // Uniswap, Pancakeswap, Honeyswap
+const NETWORK = 'BSC_MAINNET' // Hardcoded (wont change) // options: Ganache, Mainnet, Kovan, BSC_MAINNET, XDAI
+const EXCHANGE = 'Pancakeswap V2' // Uniswap, Pancakeswap, Honeyswap
 
 export const store = new Vuex.Store({
   state: {

@@ -4,9 +4,9 @@
       <div>
         <div class="justify-center mx-auto" style="max-width: 580px;">
 
-          <div class="text-center pt-1">
-            <div class="pa-1">
-              <div @click="$router.push('/amm')" class="br-8 pa-1 border c-list">
+          <div class="text-center">
+            <div class="foreground mt-1">
+              <div @click="$router.push('/amm')" class="border pa-2 border c-list">
                 <div class="caption textFaint--text font-italic">
                   Selected exchange
                 </div>
@@ -37,41 +37,13 @@
             </div>
           </div>
 
-          <div class="d-flex border-b foreground border br-8" style="overflow: hidden;">
-            <router-link 
-            :to="`${$store.state.ammPrefix}/tokens`"
-            v-slot="{ isActive, navigate }">
-              <div :class="['top-tab', {'active': isActive}]" @click="navigate">
-                <v-icon size="20" class="mr-1">mdi-checkbox-blank-circle-outline</v-icon>
-                <span>Tokens</span>
-              </div>
-            </router-link>
-
+          <div class="d-flex border-b foreground border" style="overflow: hidden;">
             <router-link 
             :to="`${$store.state.ammPrefix}/pairs`"
             v-slot="{ isActive, navigate }">
               <div :class="['top-tab', {'active': isActive}]" @click="navigate">
                 <v-icon size="20" class="mr-1">mdi-checkbox-multiple-blank-circle-outline</v-icon>
-                <span>Pairs</span>
-              </div>
-            </router-link>
-
-            <router-link 
-            :to="`${$store.state.ammPrefix}/ilos`"
-            v-slot="{ isActive, navigate }">
-              <div :class="['top-tab', {'active': isActive}]" @click="navigate">
-                <v-icon size="20" class="mr-1">mdi-rocket</v-icon>
-                <span>ILO's</span>
-              </div>
-            </router-link>
-
-            <router-link
-            v-if="$store.state.superUserMode"
-            :to="`${$store.state.ammPrefix}/sajfkhflkjasdlisdulansdlakds`"
-            v-slot="{ isActive, navigate }">
-              <div :class="['top-tab', {'active': isActive}]" @click="navigate">
-                <v-icon size="20" class="mr-1">mdi-atom</v-icon>
-                <span>Super</span>
+                <span>Frozen Pairs</span>
               </div>
             </router-link>
           </div>

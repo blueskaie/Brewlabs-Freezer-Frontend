@@ -6,7 +6,7 @@
         
         <div class="text-center">
           <img 
-          src="@/assets/img/icons/padlock.svg" 
+          src="@/assets/img/icons/padlock.png" 
           height="60px"
           width="60px"
           class="greyscale">

@@ -131,22 +131,6 @@
               </v-card>
             </a>
 
-            <!--
-            <v-card @click="goToSwap" class="pa-4 d-flex align-center c-list mb-1">
-              <v-icon>mdi-autorenew</v-icon>
-              <div class="ml-4">
-                <div>
-                  Swap
-                </div>
-                <div class="caption textFaint--text">
-                  UNC
-                  <v-icon x-small color="textFaint" class="ml-1 mr-1">mdi-arrow-right</v-icon>
-                  UNCX
-                </div>
-              </div>
-            </v-card>
-            -->
-
             <div class="text-center">
               <v-btn text @click="expandMenu = false" color="textFaint">
                 Less
@@ -158,10 +142,10 @@
         </v-expand-transition>
 
         <div class="mt-4 mb-2 d-flex align-center justify-center">
-          <v-btn icon color="textFaint" x-large href="https://twitter.com/UNCX_token" target="_blank">
+          <v-btn icon color="textFaint" x-large href="#" target="_blank">
             <v-icon>mdi-twitter</v-icon>
           </v-btn>
-          <v-btn color="textFaint" x-large icon rounded href="https://t.me/uncx_token" target="_blank">
+          <v-btn color="textFaint" x-large icon rounded href="#" target="_blank">
             <v-icon>mdi-telegram</v-icon>
           </v-btn>
         </div>

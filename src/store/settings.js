@@ -159,28 +159,6 @@ const Self = {
   // shortname must never be changed as it will break URL links. 
   // Display name can be changed without affecting the app in any way
   AMMS: {
-    'Uniswap V2': {
-      chain: 'Mainnet',
-      displayname: 'Uniswap V2',
-      shortname: 'uni-v2',
-      icon: 'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984/logo.png',
-      graphExplorer: 'https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v2',
-      ammTokenLink: 'https://v2.info.uniswap.org/token/',
-      ammPairLink: 'https://v2.uniswap.info/pair',
-      server: 'https://app.unicrypt.network/api/v1'
-      // server: 'http://localhost/api/v1'
-    },
-    'Sushiswap V1': {
-      chain: 'Mainnet',
-      displayname: 'Sushiswap',
-      shortname: 'sushi-v1',
-      icon: 'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B3595068778DD592e39A122f4f5a5cF09C90fE2/logo.png',
-      graphExplorer: 'https://api.thegraph.com/subgraphs/name/sushiswap/exchange',
-      ammTokenLink: 'https://sushiswap.vision/token/',
-      ammPairLink: 'https://sushiswap.vision/pair',
-      server: 'https://api-sushi-mainnet.unicrypt.network/api/v1'
-      // server: 'http://localhost/api/v1'
-    },
     'Pancakeswap V2': {
       chain: 'BSC_MAINNET',
       displayname: 'Pancakeswap V2',
@@ -193,62 +171,7 @@ const Self = {
       // server: 'https://api-pcakev2.unicrypt.network/api/v1'
       server: 'https://pancaketest.unicrypt.network/api/v1'
       // server: 'http://localhost/api/v1'
-    },
-    'Pancakeswap V1': {
-      chain: 'BSC_MAINNET',
-      displayname: 'Pancakeswap V1',
-      shortname: 'pancake-v1',
-      icon: 'https://cryptologos.cc/logos/pancakeswap-cake-logo.svg?v=010',
-      graphExplorer: 'https://api.bscgraph.org/subgraphs/id/QmUDNRjYZ7XbgTvfVnXHj6LcTNacDD9GPXHWLjdTKi6om6',
-      ammTokenLink: 'https://v1exchange.pancakeswap.finance/#/swap?inputCurrency=',
-      ammPairLink: 'https://pancakeswap.info/pair',
-      server: 'https://pcake.unicrypt.network/api/v1'
-      // server: 'http://localhost/api/v1'
-    },
-    'Julswap V1': {
-      chain: 'BSC_MAINNET',
-      displayname: 'Julswap',
-      shortname: 'julswap-v1',
-      icon: 'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/smartchain/assets/0x5A41F637C3f7553dBa6dDC2D3cA92641096577ea/logo.png',
-      graphExplorer: 'https://subgraph.swapliquidity.org/subgraphs/name/swapliquidity/subgraph',
-      ammTokenLink: 'https://julswap.org/token/',
-      ammPairLink: 'https://julswap.org/pair',
-      server: 'https://juld.unicrypt.network/api/v1'
-      // server: 'http://localhost/api/v1'
-    },
-    'Quickswap V1': {
-      chain: 'Matic',
-      displayname: 'Quickswap',
-      shortname: 'quickswap-v1',
-      icon: 'https://raw.githubusercontent.com/sameepsi/quickswap-interface/master/public/favicon.jpeg',
-      graphExplorer: 'https://api.thegraph.com/subgraphs/name/sameepsi/quickswap',
-      ammTokenLink: 'https://info.quickswap.exchange/token/',
-      ammPairLink: 'https://info.quickswap.exchange/pair',
-      server: 'https://quickswap.unicrypt.network/api/v1'
-      // server: 'http://localhost/api/v1'
-    },
-    'Honeyswap V1': {
-      chain: 'xDai',
-      displayname: 'Honeyswap',
-      shortname: 'honey-v1',
-      icon: 'https://raw.githubusercontent.com/1Hive/default-token-list/master/src/assets/xdai/0x71850b7E9Ee3f13Ab46d67167341E4bDc905Eef9/logo.png',
-      graphExplorer: 'https://api.thegraph.com/subgraphs/name/1hive/uniswap-v2',
-      ammTokenLink: 'https://info.honeyswap.org/token/',
-      ammPairLink: 'https://info.honeyswap.org/pair',
-      server: 'https://honey.unicrypt.network/api/v1'
-      // server: 'http://localhost/api/v1'
-    },
-    'Uniswap V2 - Kovan': {
-      chain: 'Kovan',
-      displayname: 'Uniswap V2 - Kovan',
-      shortname: 'uniswap-v2-kovan',
-      icon: 'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984/logo.png',
-      graphExplorer: 'https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v2',
-      ammTokenLink: 'https://info.uniswap.org/token/',
-      ammPairLink: 'https://uniswap.info/pair',
-      server: 'https://api-kovan.unicrypt.network/api/v1'
-      // server: 'http://localhost/api/v1'
-    },
+    }
   },
 }
 

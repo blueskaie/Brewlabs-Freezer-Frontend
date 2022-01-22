@@ -7,7 +7,7 @@
       size="70"
       color="#aaa">
         <img 
-        src="@/assets/img/UNCX_fill.svg" 
+        src="@/assets/img/BF_fill.png" 
         height="60px"
         width="60px"
         class="greyscale">

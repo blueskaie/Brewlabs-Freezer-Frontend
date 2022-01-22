@@ -18,19 +18,16 @@
           color="text"
           >
           <img 
-          src="@/assets/img/black_wings.svg" 
+          src="@/assets/img/black_wings.png" 
           height="68px"
           width="68px">
 
           </v-progress-circular>
           <div class="mt-8">
-            Confirm this transaction in your wallet
+            Almost there! Please confirm this transaction
           </div>
           <div class="mt-6 caption">
             Using a mobile wallet?
-          </div>
-          <div class="caption textFaint--text">
-            Sometimes it helps to kill the mobile app and restart it if the transaction is not shown in the wallet.
           </div>
         </div>
       </v-card-text>

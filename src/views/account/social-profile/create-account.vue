@@ -81,7 +81,7 @@
           </v-col>
           <v-col cols="5">
             <img 
-            src="@/assets/img/UNCX_fill.svg" 
+            src="@/assets/img/BF_fill.png" 
             height="40px"
             width="40px">
             <div class="title">

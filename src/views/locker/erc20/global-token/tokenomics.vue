@@ -10,7 +10,7 @@
       width="2"
       color="#aaa">
         <img 
-        src="@/assets/img/UNCX_fill.svg" 
+        src="@/assets/img/BF_fill.png" 
         height="50px"
         class="greyscale"
         width="50px">

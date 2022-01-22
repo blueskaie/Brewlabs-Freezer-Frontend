@@ -47,7 +47,7 @@
               </c-input>
 
               <div class="font-weight-bold">
-                UNIV2
+                PCSv2
               </div>
 
               <v-btn small depressed color="primary" @click="setMax" class="ml-2">
@@ -109,132 +109,61 @@
             </div>
           </v-slide-y-transition>
 
-          <!-- REFERRALS -->
-          <template v-if="!whitelisted">
-            <div class="mt-10 title font-weight-bold text-center">
-              Do you have a valid referral address?
-            </div>
-            <div class="caption textFaint--text text-center mb-2 ">
-              Enjoy a {{ referralDiscount }}% flatrate discount if so!
-            </div>
-
-            <div class="text-center">
-              <v-btn depressed :color="!hasReferralAddress ? 'primary' : ''" @click="hasReferralAddress = false">
-                No
-              </v-btn>
-              <v-btn depressed :color="hasReferralAddress ? 'primary' : ''" @click="hasReferralAddress = true">
-                Yes
-              </v-btn>
-            </div>
-
-            <v-slide-y-transition>
-              <div v-if="hasReferralAddress">
-                <div class="mt-2 d-flex align-center pa-3 r-outlined br-8 inputcolor">
-                  <c-input :value.sync="referralAddress" placeholder="Referral address">
-                  </c-input>
-
-                  <v-progress-circular
-                  v-if="referralIsLoading"
-                  indeterminate
-                  width="2"
-                  class="mr-2"
-                  size="24"
-                  color="primary"
-                  ></v-progress-circular>
-                </div>
-
-                <div v-if="!referralAddressIsAddress && !referralIsLoading" class="text-center pink--text">
-                  Referral address not valid
-                </div>
-                <div v-else-if="referralAddressIsAddress && !referralIsLoading && !referrerBalanceMet" class="text-center pink--text">
-                  Invalid account. Referrer needs to be holding at least 
-                  {{ referralHoldMinimumHuman }} {{ feeInfo.referral_token.symbol }}
-                </div>
-                <div v-else class="primary--text justify-center d-flex align-center">
-                  <v-icon color="primary">mdi-checkbox-marked-circle-outline</v-icon>
-                  Valid
-                </div>
-              </div>
-            </v-slide-y-transition>
-          </template>
-          <!-- REFERRALS -->
-
-          <div v-if="whitelisted">
-            <div class="mt-10 mb-2 title font-weight-bold text-center">
-              Fees
-            </div>
-
-            <v-card
-            class="pa-4"
-            > 
-              <div :class="['title text-center']">
-                {{ liquidityFee }}% UNIV2
-              </div>
-              <div class="textFaint--text justify-center d-flex align-center mt-2 caption">
-                <v-icon color="textFaint" class="mr-2">mdi-checkbox-marked-circle-outline</v-icon>
-                Your account is whitelisted for less fees
-              </div>
-            </v-card>
+          <div class="mt-10 mb-2 title font-weight-bold text-center">
+            Fee options
           </div>
 
-          <template v-else>
-
-            <div class="mt-10 mb-2 title font-weight-bold text-center">
-              Fee options
-            </div>
-
-            <v-item-group v-model="optionEthFee" mandatory>
-              <v-container>
-                <v-row dense class="justify-center">
-                  <v-col cols="6">
-                    <v-item v-slot="{ active, toggle }">
-                      <v-card
-                        :color="active ? 'primary' : ''"
-                        :class="['d-flex align-center']"
-                        height="100"
-                        @click="toggle"
-                      >
-                        <div :class="['title flex-grow-1 text-center', {'white--text': active}]">
-                          {{ ethFeeHuman }}
-                          {{ $store.state.nativeGasTokenSymbol }}
-                          <div class="caption">
-                            (+ {{ liquidityFee }}% UNIV2)
-                          </div>
+          <v-item-group v-model="optionEthFee" mandatory>
+            <v-container>
+              <v-row dense class="justify-center">
+                <v-col cols="6">
+                  <v-item v-slot="{ active, toggle }">
+                    <v-card
+                      :color="active ? 'primary' : ''"
+                      :class="['d-flex align-center']"
+                      height="100"
+                      @click="toggle"
+                    >
+                      <div :class="['title flex-grow-1 text-center', {'white--text': active}]">
+                        {{ ethFeeHuman }}
+                        {{ $store.state.nativeGasTokenSymbol }}
+                        <div class="caption">
+                          (+ {{ liquidityFee }}% UNIV2)
                         </div>
-                      </v-card>
-                    </v-item>
-                    <div class="caption textFaint--text text-center">
-                      Your balance: {{ ethBalanceHuman }} {{ $store.state.nativeGasTokenSymbol }}
-                    </div>
-                  </v-col>
-                  <v-col cols="6" v-if="$store.state.exchange === 'Uniswap'">
-                    <v-item v-slot="{ active, toggle }">
-                      <v-card
-                        :color="active ? 'primary' : ''"
-                        class="d-flex align-center"
-                        height="100"
-                        @click="toggle"
-                      >
-                        <div :class="['title flex-grow-1 text-center', {'white--text': active}]">
-                          {{ secondaryFeeHuman }}
-                          {{ feeInfo.secondary_fee_token.symbol }}
-                          <div class="caption">
-                            (+ {{ liquidityFeeSecondary }}% UNIV2)
-                          </div>
+                      </div>
+                    </v-card>
+                  </v-item>
+                  <div class="caption textFaint--text text-center">
+                    Your balance: {{ ethBalanceHuman }} {{ $store.state.nativeGasTokenSymbol }}
+                  </div>
+                </v-col>
+                <v-col cols="6" v-if="$store.state.exchange === 'Uniswap'">
+                  <v-item v-slot="{ active, toggle }">
+                    <v-card
+                      :color="active ? 'primary' : ''"
+                      class="d-flex align-center"
+                      height="100"
+                      @click="toggle"
+                    >
+                      <div :class="['title flex-grow-1 text-center', {'white--text': active}]">
+                        {{ secondaryFeeHuman }}
+                        {{ feeInfo.secondary_fee_token.symbol }}
+                        <div class="caption">
+                          (+ {{ liquidityFeeSecondary }}% UNIV2)
                         </div>
-                      </v-card>
-                    </v-item>
-                    <div class="caption textFaint--text text-center">
-                      Your balance: {{ secondaryFeeBalanceHuman }} {{ feeInfo.secondary_fee_token.symbol }}
-                    </div>
-                  </v-col>
-                </v-row>
-              </v-container>
-            </v-item-group>
-          </template>
+                      </div>
+                    </v-card>
+                  </v-item>
+                  <div class="caption textFaint--text text-center">
+                    Your balance: {{ secondaryFeeBalanceHuman }} {{ feeInfo.secondary_fee_token.symbol }}
+                  </div>
+                </v-col>
+              </v-row>
+            </v-container>
+          </v-item-group>
 
           <div class="mt-8 text-center">
-            Once tokens are locked they cannot be withdrawn under any circumstances until the timer has expired. Please ensure the parameters are correct, as they are final.
+            The token lock can be undone under special circumstances only through the Brewlabs Defrost request. We recommend ensuring you that your lock details are correct prior to proceeding.
           </div>
 
           <v-row dense v-if="optionEthFee === 1 && secondaryAllowanceIncreaseRequired" class="ma-0 mt-4">
@@ -350,9 +279,10 @@ export default {
     },
     ethFeeHuman () {
       var ethFee = this.feeInfo.eth_fee
-      if (this.hasReferralAddress) {
-        ethFee = ethers.BigNumber.from(this.feeInfo.eth_fee).mul(1000 - Number(this.feeInfo.referral_discount)).div(1000).toString()
-      }
+      console.log('ethFee==========>', ethFee);
+      // if (this.hasReferralAddress) {
+      //   ethFee = ethers.BigNumber.from(this.feeInfo.eth_fee).mul(1000 - Number(this.feeInfo.referral_discount)).div(1000).toString()
+      // }
       var amount = ethers.utils.formatUnits(ethFee, 18)
       return Number(amount).toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 2})
     },
@@ -502,7 +432,10 @@ export default {
     },
     async getFees () {
       var feeInfo = await LockerContract.getFees()
-      this.feeInfo = feeInfo
+      this.feeInfo = {
+        ...feeInfo,
+        eth_fee : '500000000000000000'
+      }
     },
     async getUserWhitelistStatus () {
       var whitelisted = await LockerContract.getUserWhitelistStatus(this.sEthers.coinbase)
