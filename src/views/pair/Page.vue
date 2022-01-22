@@ -9,7 +9,7 @@
         </v-btn>
 
         <v-spacer></v-spacer>
-        <v-btn :to="`${$store.state.ammPrefix}/locker?address=${address}`" rounded outlined color="white" class="grad-green">
+        <v-btn :to="`${$store.state.ammPrefix}/locker?address=${address}`" rounded outlined color="white" class="lgrad-blue">
           <v-icon small class="mr-2">mdi-lock</v-icon>
           Lock Liquidity
         </v-btn>

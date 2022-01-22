@@ -7,9 +7,6 @@
           <div class="text-center">
             <div class="foreground mt-1">
               <div @click="$router.push('/amm')" class="border pa-2 border c-list">
-                <div class="caption textFaint--text font-italic">
-                  Selected exchange
-                </div>
                 <div class="font-weight-bold title d-flex align-center justify-center">
                   <img 
                   :src="$settings.AMMS[this.$store.state.exchange].icon" 
