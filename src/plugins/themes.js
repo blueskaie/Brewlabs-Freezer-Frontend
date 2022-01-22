@@ -56,10 +56,10 @@ export default {
       icon: '#aaaaaa',
       textFaint: '#b9babb',
       heading: '#0F3256',
-      outline: "#353535",
-      background: "#191c1f",
+      outline: "#262626",
+      background: "#0e1012",
       midground: "#171717",
-      foreground: "#1f2327",
+      foreground: "#1a1e21",
       hover: "#22272c",
       inputcolor: "#292929",
     }

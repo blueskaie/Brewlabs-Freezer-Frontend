@@ -36,7 +36,7 @@ import AMMSelect from '@/views/AMMSelect'
 import ChainSelect from '@/views/ChainSelect'
 
 import Dashboard from '@/views/trending/Trending'
-import Services from '@/views/services/Page'
+// import Services from '@/views/services/Page'
 import TermsAndConditions from '@/views/terms-conditions/Page'
 import TC_Farms from '@/views/terms-conditions/farms'
 import TC_General from '@/views/terms-conditions/general'
@@ -147,21 +147,21 @@ const routes = [
       },
     ]
   },
-  {
-    path: '/',
-    name: 'Dashboard',
-    component: Dashboard
-  },
+  // {
+  //   path: '/',
+  //   name: 'Dashboard',
+  //   component: Dashboard
+  // },
   {
     path: '/dashboard',
     name: 'Dashboard',
     component: Dashboard
   },
-  {
-    path: '/services',
-    name: 'Services',
-    component: Services,
-  },
+  // {
+  //   path: '/services',
+  //   name: 'Services',
+  //   component: Services,
+  // },
 
   {
     path: '/terms',
@@ -190,7 +190,8 @@ const routes = [
   },
 
   {
-    path: '/services/lock-liquidity',
+    path: '/',
+    // path: '/services/lock-liquidity',
     name: 'Liquidity Locker',
     component: LiqLockerSelectAMM,
   },

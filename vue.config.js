@@ -1,6 +1,6 @@
 module.exports = {
   pwa: {
-    name: 'Unicrypt',
+    name: 'BrewlabsFreezer',
     themeColor: '#000000',
     msTileColor: '#000000',
     appleMobileWebAppCapable: 'yes',
@@ -13,7 +13,7 @@ module.exports = {
       swDest: 'service-worker.js',
     },
     manifestOptions: {
-      name: 'Unicrypt',
+      name: 'BrewlabsFreezer',
       icons: [
         {
           'src': './img/icons/android-chrome-192x192.png',

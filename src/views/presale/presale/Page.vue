@@ -204,7 +204,7 @@
             size="130"
             color="#aaa">
               <img 
-              src="@/assets/img/UNCX_fill.svg" 
+              src="@/assets/img/BF_fill.png" 
               height="120px"
               class="greyscale"
               width="120px">

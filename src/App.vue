@@ -11,110 +11,19 @@
     class="pr-3"
     color="foreground"
     >
-      <v-toolbar-title v-if="true" class="d-flex align-center font-weight-bold" href="https//www.unicrypt.network">
+      <v-toolbar-title v-if="true" class="d-flex align-center font-weight-bold" href="#">
         <img 
         v-if="true"
-        src="@/assets/img/UNCX_fill.svg"
+        src="@/assets/img/BF_fill.png"
         height="40px"
         width="40px"
         class="mr-2">
 
         <div v-if="true" class="mr-6" style="font-size: 1.2rem;">
-          UNICRYPT
+          BrewlabsFreezer
         </div>
       </v-toolbar-title>
 
-      <v-btn rounded text to="/dashboard">
-        <v-icon class="blocks-icon-green">mdi-fire</v-icon> DASHBOARD
-      </v-btn>
-
-      <v-menu
-      offset-y
-      open-on-hover
-      content-class="br-20 pa-0"
-      >
-        <template v-slot:activator="{ attrs, on }">
-          <v-btn
-            text
-            rounded
-            v-bind="attrs"
-            v-on="on"
-            style="min-width: 74px;"
-            @click.stop="clickBrowserButton"
-          >
-            BROWSER
-            <v-icon small>mdi-chevron-down</v-icon>
-          </v-btn>
-        </template>
-
-        <v-list style="min-width: 250px;" class="foreground br-20 pa-0">
-          <div class="px-4 py-2 caption font-italic text-center background">
-            Select an exchange
-          </div>
-          <div class="d-flex align-center c-list pa-4 border-b" @click="selectExchange('Uniswap V2')">
-            <img 
-            :src="$settings.AMMS['Uniswap V2'].icon"
-            height="30px"
-            width="30px"
-            class="mr-3">
-            <div>
-              <div class="caption">
-                Uniswap V2
-              </div>
-              <div class="caption textFaint--text">
-                Ethereum Mainnet
-              </div>
-            </div>
-          </div>
-          <div class="d-flex align-center c-list pa-4 border-b" @click="selectExchange('Pancakeswap V2')">
-            <img 
-            :src="$settings.AMMS['Pancakeswap V2'].icon"
-            height="30px"
-            width="30px"
-            class="mr-3">
-            <div>
-              <div class="caption">
-                Pancakeswap V2
-              </div>
-              <div class="caption textFaint--text">
-                Binance smart chain
-              </div>
-            </div>
-          </div>
-          <div class="d-flex align-center c-list px-4 py-3 border-b" @click="$router.push('/amm')">
-            <img 
-            :src="$settings.AMMS['Sushiswap V1'].icon"
-            height="20px"
-            width="20px"
-            style="z-index: 2;">
-            <img 
-            :src="$settings.AMMS['Quickswap V1'].icon"
-            height="20px"
-            width="20px"
-            class="br-c"
-            style="margin-left: -10px;z-index: 1;">
-            <div>
-              <div class="ml-4 textFaint--text caption">
-                ...other exchanges
-                <v-icon small>mdi-chevron-right</v-icon>
-              </div>
-            </div>
-          </div>
-        </v-list>
-      </v-menu>
-
-      <v-btn text rounded to="/services">
-        SERVICES
-      </v-btn>
-
-      <v-btn text rounded :to="`${$store.state.chainPrefix}/farms`">
-        FARMS
-      </v-btn>
-      <!--
-      <v-btn text href="https://unibot.network/" target="_blank">
-        Unibot
-      </v-btn>
-      -->
       <v-spacer></v-spacer>
       <tx-spinner></tx-spinner>
       
@@ -127,11 +36,6 @@
       rounded depressed
       >
         Wrong network
-        <!--
-          <div class="caption ml-1">
-          Switch your wallet to {{ $store.state.requiredNetwork }}
-        </div>
-        -->
       </v-btn>
 
       <v-btn
@@ -187,7 +91,7 @@
 
       <v-toolbar-title v-if="false" class="font-weight-bold">
         <div class="">
-          UNICRYPT
+          BrewlabsFreezer
         </div>
       </v-toolbar-title>
 
@@ -270,13 +174,13 @@
 
     <!-- DESKTOP FOOTER -->
     <v-footer v-if="$vuetify.breakpoint.mdAndUp" class="pa-4 justify-center foreground border-t">
-      <v-btn icon color="textFaint" x-large href="https://twitter.com/UNCX_token" target="_blank">
+      <v-btn icon color="textFaint" x-large href="#" target="_blank">
         <v-icon>mdi-twitter</v-icon>
       </v-btn>
-      <v-btn color="textFaint" x-large icon rounded href="https://t.me/uncx_token" target="_blank">
+      <v-btn color="textFaint" x-large icon rounded href="#" target="_blank">
         <v-icon>mdi-telegram</v-icon>
       </v-btn>
-      <v-btn text rounded target="_blank" href="https://docs.unicrypt.network">
+      <v-btn text rounded target="_blank" href="#">
         Docs
       </v-btn>
       <v-btn text rounded to="/terms" exact>
@@ -285,11 +189,11 @@
       <v-btn text rounded to="/terms/privacy-policy">
         Privacy Policy
       </v-btn>
-      <v-btn text rounded target="_blank" href="https://www.unicrypt.network">
-        unicrypt.network
+      <v-btn text rounded target="_blank" href="#">
+        brewlabs.network
       </v-btn>
       <!--
-      <v-btn text rounded target="_blank" href="https://docs.unicrypt.network">
+      <v-btn text rounded target="_blank" href="#">
         Terms and conditions
       </v-btn>
       -->
@@ -357,7 +261,7 @@
       <v-scale-transition appear mode="out-in">
         <div>
           <img 
-          src="@/assets/img/unicrypt_network.svg" 
+          src="@/assets/img/unicrypt_network.png" 
           height="160px"
           width="320px">
           <div v-if="false" class="textFaint--text" style="letter-spacing: 0.5rem!important;">

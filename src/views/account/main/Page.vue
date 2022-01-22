@@ -100,7 +100,7 @@
                 <v-col cols="6">
                   <v-btn rounded text class="textFaint--text d-flex align-center pa-2 font-weight-regular" @click="expandCoinBalances = !expandCoinBalances">
                     <img 
-                    src="@/assets/img/UNCX_fill.svg" 
+                    src="@/assets/img/BF_fill.png" 
                     height="24px"
                     width="24px"
                     class="mr-2">

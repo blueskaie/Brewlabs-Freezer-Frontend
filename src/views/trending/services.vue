@@ -12,7 +12,7 @@
     v-slot="{ navigate }">
       <div class="d-flex align-center c-list pa-4 border-b" @click="navigate">
         <img 
-        src="@/assets/img/icons/padlock.svg" 
+        src="@/assets/img/icons/padlock.png" 
         height="60px"
         width="60px"
         class="mr-3">
@@ -33,7 +33,7 @@
     v-slot="{ navigate }">
       <div class="d-flex align-center c-list pa-4 border-b" @click="navigate">
         <img 
-        src="@/assets/img/icons/padlock.svg" 
+        src="@/assets/img/icons/padlock.png" 
         height="60px"
         width="60px"
         class="mr-3">

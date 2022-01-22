@@ -9,7 +9,7 @@
         </v-btn>
 
         <v-spacer></v-spacer>
-        <v-btn :to="`${$store.state.ammPrefix}/locker?address=${address}`" rounded outlined color="white" class="grad-green">
+        <v-btn :to="`${$store.state.ammPrefix}/locker?address=${address}`" rounded outlined color="white" class="lgrad-blue">
           <v-icon small class="mr-2">mdi-lock</v-icon>
           Lock Liquidity
         </v-btn>
@@ -176,7 +176,7 @@
               </div>
 
               <div class="textFaint--text caption mb-8">
-                Please be aware only the univ2 tokens are locked. Not the actual dollar value. This changes as people trade. More liquidity tokens are also minted as people add liquidity to the pool.
+                This liquidity pair is locked and its locked value is subject to changes in market price of the tokens within this pair.
               </div>
             </div>
 

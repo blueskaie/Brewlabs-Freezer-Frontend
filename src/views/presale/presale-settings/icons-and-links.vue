@@ -43,7 +43,7 @@
       Telegram
     </div>
     <div class="caption textFaint--text">
-      e.g. https://t.me/uncx_token
+      e.g. #
     </div>
     <div class="mt-2 d-flex align-center pa-3 br-20 inputcolor">
       <c-input :value.sync="telegramURL" placeholder="https://">
@@ -60,7 +60,7 @@
       Twitter
     </div>
     <div class="caption textFaint--text">
-      e.g. https://twitter.com/UNCX_token
+      e.g. #
     </div>
     <div class="mt-2 d-flex align-center pa-3 br-20 inputcolor">
       <c-input :value.sync="twitterURL" placeholder="https://">

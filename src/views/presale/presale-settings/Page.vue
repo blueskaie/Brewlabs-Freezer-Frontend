@@ -7,7 +7,7 @@
       size="150"
       color="primary">
         <img 
-        src="@/assets/img/UNCX_fill.svg" 
+        src="@/assets/img/BF_fill.png" 
         height="120px"
         width="120px">
       </v-progress-circular>
