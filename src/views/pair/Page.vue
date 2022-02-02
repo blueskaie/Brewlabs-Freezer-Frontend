@@ -21,24 +21,82 @@
       </trade-test>
 
       <div class="pa-4 mb-2 text-center">
-        <div class="d-flex mb-3 align-center justify-center title font-weight-bold">
-          <coin-icon :address="pair.token0.address" :url="pair.token0.icon_url" style="z-index: 1;"></coin-icon>
-          <coin-icon :address="pair.token1.address" :url="pair.token1.icon_url" class="mr-2" style="margin-left: -10px;"></coin-icon>
-          <v-btn text class="title pa-0" color="primary" @click="$root.ammLink(`/token/${pair.token0.address}`)">
-            {{ token0Symbol }}
-          </v-btn>
-          <span class="textFaint--text">
-            /
-          </span>
-          <v-btn text class="title pa-0" color="primary" @click="$root.ammLink(`/token/${pair.token1.address}`)">
-            {{ token1Symbol }}
-          </v-btn>
+        <div  class="text-center caption textFaint--text mb-3">
+          <span>Pancakeswap V2 pair: </span>
+          <copy-address :address="pair.address" color="textFaint"></copy-address>
         </div>
-        <div class="">
-          {{ pair.token0.name }} /
-          {{ pair.token1.name }}
+        <div class="d-flex mt-8">
+          1 {{ pair.token0.symbol }} = 
+          {{ token0Price }} {{ pair.token1.symbol }}
         </div>
-        <copy-address :address="pair.address" color="textFaint"></copy-address>
+        <div class="d-flex">
+          1 {{ pair.token1.symbol }} =
+          {{ token1Price }} {{ pair.token0.symbol }}
+        </div>
+        <div class="text-center">
+          <div class="caption textFaint--text mb-1">locked Liquidity</div>
+          <div class="title">{{ percentOfTotal }}%</div>
+        </div>
+        <div class="ma-1 d-flex align-center">
+          <v-progress-circular
+            :value="percentOfTotal"
+            :rotate="-90"
+            size="50"
+            width="3"
+            color="white">
+              <coin-icon :address="pair.token0.address" :url="pair.token0.icon_url" style="z-index: 1;"></coin-icon>
+          </v-progress-circular>
+          <div class="outline flex" style="height: 2px;"></div>
+          <v-progress-circular
+            :value="percentOfTotal"
+            :rotate="-90"
+            size="60"
+            width="3"
+            color="white">
+              <v-icon size="40" color="white">mdi-lock</v-icon>
+          </v-progress-circular>
+          <div class="outline flex" style="height: 2px;"></div>
+          <v-progress-circular
+            :value="percentOfTotal"
+            :rotate="-90"
+            size="50"
+            width="3"
+            color="white">
+              <coin-icon :address="pair.token1.address" :url="pair.token1.icon_url" style="z-index: 1;"></coin-icon>
+          </v-progress-circular>        
+        </div>
+        <div class="d-flex mb-3 align-center justify-space-between">
+          <div class="d-flex flex-column align-start">
+            <v-btn text class="title pa-0 mb-2 font-weight-bold" @click="$root.ammLink(`/token/${pair.token0.address}`)">
+              {{ token0Symbol }}
+            </v-btn>
+            <div class="d-flex align-center" style="color: lightgreen;">
+              <v-icon size="15" color="green">mdi-lock-outline</v-icon>
+              <coin-icon :address="pair.token0.address" :url="pair.token0.icon_url" style="z-index: 1; width: 15px; height: 15px"></coin-icon>
+              <span class="ml-2"> {{ token0LockedBalance }} T </span>
+            </div>
+            <div class="d-flex align-center">
+              <v-icon size="15" color="white">mdi-water-outline</v-icon>
+              <coin-icon :address="pair.token0.address" :url="pair.token0.icon_url" style="z-index: 1; width: 15px; height: 15px"></coin-icon>
+              <span class="ml-2"> {{ token0UnlockedBalance }} T </span>
+            </div>
+          </div>
+          <div class="d-flex flex-column align-end" >
+            <v-btn text class="title pa-0 mb-2 font-weight-bold" @click="$root.ammLink(`/token/${pair.token1.address}`)">
+              {{ token1Symbol }}
+            </v-btn>
+            <div class="d-flex align-center" style="color: lightgreen;">
+              <span class="mr-2"> {{ token1LockedBalance }}  </span>
+              <coin-icon :address="pair.token0.address" :url="pair.token0.icon_url" style="z-index: 1; width: 15px; height: 15px"></coin-icon>
+              <v-icon size="15" color="green">mdi-lock-outline</v-icon>
+            </div>
+            <div class="d-flex align-center">
+              <span class="mr-2"> {{ token1UnlockedBalance }} </span>
+              <coin-icon :address="pair.token0.address" :url="pair.token0.icon_url" style="z-index: 1; width: 15px; height: 15px"></coin-icon>
+              <v-icon size="15" color="white">mdi-water-outline</v-icon>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="mt-4 mb-6 text-center">
@@ -52,7 +110,7 @@
         </v-btn>
         <v-btn v-if="dextLink" text color="textFaint" rounded :href="dextLink" target="_blank">
           <img 
-          src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x26CE25148832C04f3d7F26F32478a9fe55197166/logo.png" 
+          src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xfB7B4564402E5500dB5bB6d63Ae671302777C75a/logo.png" 
           height="18px"
           width="18px"
           class="mr-1">
@@ -63,28 +121,14 @@
           Uniswap index: {{ pair.uniswap_index }}
         </div>
       </div>
-
       <div :class="['']">
-
+      <!--
         <v-card v-if="uniswapAPIIsDown" class="pa-4 br-20 mb-4">
           <div class="pink--text">
             {{ $store.state.exchange }} API is down / $ value not determinable
           </div>
         </v-card>
-
-        <div v-if="loadingPOL1 && POL1Length > 1" class="text-center">
-          <v-progress-circular
-          :rotate="-90"
-          :value="POL1Progress"
-          size="60"
-          color="primary">
-            <v-icon>mdi-lock</v-icon>
-          </v-progress-circular>
-          <div>
-            {{ POL1SyncIndex }} / {{ POL1Length }}
-          </div>
-        </div>
-
+      -->
         <div v-if="loadingLockedLiquidity" class="text-center textFaint--text">
           <div>
             Loading...
@@ -92,55 +136,8 @@
         </div>
 
         <template v-else>
-          
-          <!-- LOCKED -->
-          <div v-if="items.length > 0">
-            <div class="d-flex justify-end caption align-center mb-2">
-              <div class="caption mr-2">
-                Unicrypt Certified Lock
-              </div>
-              <img 
-              src="@/assets/img/flags/verified.svg" 
-              height="20px"
-              class="mr-2"
-              width="20px">
-            </div>
-            <div class="mb-2 font-weight-medium midground pa-4 br-20" style="position: relative; overflow: hidden;">
-              <div class="green" style="position: absolute; left: 0px; top: 0px; bottom: 0px; right: 0px;opacity: 0.2;">
-              </div>
-              <div>
-                <div class="ma-1 d-flex align-center">
-                  <v-progress-circular
-                  :value="percentOfTotal"
-                  :rotate="-90"
-                  size="50"
-                  width="3"
-                  color="green">
-                    <v-icon size="30" color="green">mdi-lock-outline</v-icon>
-                  </v-progress-circular>
-                  
-                  <div class="ml-4">
-
-                    <div class="title text--text">
-                      <span class="text--text">{{ percentOfTotal }}%</span> LOCKED
-                    </div>
-                    <div class="d-flex">
-                      <div class="green--text">
-                        ${{ lockedValueHuman }}
-                      </div>
-                      <div class="textFaint--text ml-1">
-                        / ${{ reserveValueHuman }}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-          <!-- NOT LOCKED -->
-          <div v-else class="mb-2 d-flex align-center font-weight-medium midground pa-4 br-20" style="position: relative; overflow: hidden;">
+        <!--
+          <div v-if="items.lentgh == 0" class="mb-2 d-flex align-center font-weight-medium midground pa-4 br-20" style="position: relative; overflow: hidden;">
             <div class="orange" style="position: absolute; left: 0px; top: 0px; bottom: 0px; right: 0px;opacity: 0.2;">
             </div>
             <div>
@@ -157,26 +154,28 @@
               </div>
             </div>
           </div>
-
-          <div class="d-flex mt-8">
-            Total LP tokens
-            <v-spacer></v-spacer>
-            {{ totalSupplyHuman }}
+        -->
+          <div class="text-center caption textFaint--text">
+            <div class="d-flex mt-8">
+              Total LP tokens
+              <v-spacer></v-spacer>
+              {{ totalSupplyHuman }}
+            </div>
+            <div class="d-flex">
+              Total locked LP
+              <v-spacer></v-spacer>
+              {{ totalLockedHuman }}
+            </div>
           </div>
-          <div class="d-flex">
-            Total locked LP
-            <v-spacer></v-spacer>
-            {{ totalLockedHuman }}
-          </div>
 
-          <template v-if="items.length > 0">
+          <template v-if="items.length == 0">
             <div class="mt-8">
               <div class="t-large">
                 Liquidity Locks
               </div>
 
               <div class="textFaint--text caption mb-8">
-                This liquidity pair is locked and its locked value is subject to changes in market price of the tokens within this pair.
+                Please be aware only the univ2 tokens are locked. Not the actual dollar value. This changes as people trade. More liquidity tokens are also minted as people add liquidity to the pool.
               </div>
             </div>
 
@@ -185,7 +184,7 @@
                 Value
               </div>
               <v-spacer></v-spacer>
-              <div class="mr-9">
+              <div class="mr-2">
                 Unlock date
               </div>
             </div>
@@ -197,10 +196,9 @@
 
         </template>
 
-        <v2-card v-if="false" :address="address"></v2-card>
+        <v2-card v-if="true" :address="address"></v2-card>
 
-      </div>
-
+      </div> 
     </v-card>
     
   </v-container>
@@ -305,6 +303,24 @@ export default {
       }
       return this.pair.token1.symbol
     },
+    token0LockedBalance () {
+      return "435,13.67";
+    },
+    token0UnlockedBalance () {
+      return "435,13.67";
+    },
+    token1LockedBalance () {
+      return "435,13.67";
+    },
+    token1UnlockedBalance () {
+      return "434,532,3.453";
+    },
+    token0Price () {
+      return "0.000000001310085449";
+    },
+    token1Price () {
+      return "763,308,988.92";
+    }
   },
 
   methods: {

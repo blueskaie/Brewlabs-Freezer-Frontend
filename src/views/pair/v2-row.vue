@@ -1,24 +1,33 @@
 <template>
-  <div :class="['d-flex align-center border-b pa-2', {'textFaint--text': epochHasPassed}]">
-    <div>
-      <div class="font-weight-bold">
-        ${{ dollarValue }}
-      </div>
-      <div class="t-small">
-        {{ amountHuman }} univ2
-      </div>
-    </div>
-    <v-spacer></v-spacer>
-    <div class="text-end">
+  <div>
+    <div :class="['d-flex align-center pa-2 c-list', {'textFaint--text': epochHasPassed}]" @click="expandInfo = !expandInfo">
       <div>
-        {{ dateFromNow }}
+        <div class="font-weight-bold">
+          ${{ dollarValue }}
+        </div>
+        <div class="t-small">
+          {{ amountHuman }} univ2
+        </div>
       </div>
-      <div class="t-small">
-        {{ dateSimple }}
+      <v-spacer></v-spacer>
+      <div class="text-end">
+        <div>
+          {{ dateFromNow }}
+        </div>
+        <div class="t-small">
+          {{ dateSimple }}
+        </div>
       </div>
+      <v-icon class="ml-3" color="textFaint" v-if="epochHasPassed">mdi-lock-open-outline</v-icon>
+      <v-icon class="ml-3" color="primary" v-else>mdi-lock</v-icon>
     </div>
-    <v-icon class="ml-3" color="textFaint" v-if="epochHasPassed">mdi-lock-open-outline</v-icon>
-    <v-icon class="ml-3" color="primary" v-else>mdi-lock</v-icon>
+
+    <v-expand-transition>
+      <div v-if="expandInfo" class="background px-2 textFaint--text">
+        <div>owner: </div>
+        <div>ID: </div>
+      </div>
+    </v-expand-transition>
   </div>
 </template>
 
@@ -36,6 +45,10 @@ export default {
       type: String
     }
   },
+
+  data: () => ({
+    expandInfo: false
+  }),
 
   computed: {
     percent () {
