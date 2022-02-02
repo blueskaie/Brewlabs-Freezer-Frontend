@@ -1,7 +1,7 @@
 <template>
   <v-container>
 
-    <v-card :class="['br-20']">
+    <v-card :class="['br-10']">
 
       <div v-if="loadingLockedLiquidity" class="text-center pa-6">
         <v-progress-circular
@@ -14,31 +14,9 @@
           Loading
         </div>
       </div>
-
       <template v-else>
 
         <template v-if="items.length > 0">
-
-          <div class="pa-4">
-            <div class="mt-2 mb-1 t-large">
-              V2 Liquidity Locks
-            </div>
-
-            <div class="textFaint--text t-small">
-              Please be aware only the univ2 tokens are locked. Not the actual dollar value. This changes as people trade. More liquidity tokens are also minted as people add liquidity to the pool.
-            </div>
-          </div>
-
-          <div class="d-flex mt-4 font-italic">
-            <div class="ml-2">
-              Value
-            </div>
-            <v-spacer></v-spacer>
-            <div class="mr-8">
-              Unlock date
-            </div>
-          </div>
-
           <div>
             <unlock-row v-for="(item, index) of items" :item="item" :key="index" :reserveUSD="reserveUSD" :totalSupply="totalSupply"></unlock-row>
           </div>
@@ -80,7 +58,10 @@ export default {
       token1: {}
     },
     totalInLocker: '0',
-    items: [],
+    items: [{
+      amount: 10000000000,
+      unlock_date: 1689090897
+    }],
     totalSupply: '0',
     reserveUSD: '0',
     loadingLockedLiquidity: true,
