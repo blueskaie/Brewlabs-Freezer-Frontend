@@ -91,50 +91,46 @@
     <v-expand-transition>
       <div v-if="expandInfo" class="background">
 
-        <div class="pt-3 px-5">
-          <div class="d-flex align-center justify-space-between px-5 mx-5">
-            <div class="text-center">
-              <coin-icon :address="item.token0.address" :url="item.token0.icon_url" :network="cNetwork"  :size="30" class="mr-1 ml-5"></coin-icon>
-            </div>
-            <div class="outline flex" style="height: 2px;"></div>
-            <div class="text-center">
-               <img 
-                v-if="true"
-                src="@/assets/img/BF_fill.png"
-                height="60px"
-                width="60px"
-                class="mx-1">
-            </div>
-            <div class="outline flex" style="height: 2px;"></div>
-            <div class="text-center">
-              <coin-icon :address="item.token1.address" :url="item.token1.icon_url" :network="cNetwork"  :size="30" class="ml-1 mr-5"></coin-icon>
-            </div>
-          </div>
+        <div class="d-flex align-center pt-2">
+          <div class="flex" style="height: 2px"></div>
+          <coin-icon :address="item.token0.address" :url="item.token0.icon_url" :network="cNetwork"  :size="40" style="border-radius: 500px"></coin-icon>
+          <div class="outline flex" style="height: 2px"></div>
+          <img 
+          v-if="true"
+          src="@/assets/img/BF_fill.png"
+          height="60px"
+          width="60px"
+          class="mx-1">
+          <div class="outline flex" style="height: 2px"></div>
+          <coin-icon :address="item.token1.address" :url="item.token1.icon_url" :network="cNetwork"  :size="40" style="border-radius: 500px"></coin-icon>
+          <div class="flex" style="height: 2px"></div>
+        </div>
 
-          <div class="d-flex align-center justify-space-between px-5 mx-5">
-            <div class="mr-1 ml-5" style="width: 100px">
-              <div class="caption textFaint--text font-weight-medium"> {{ token0Symbol }} </div>
-              <div class="font-weight-bold"> {{ reserve0Human }} </div>
-            </div>
-            <div class="mx-1">
-              <v-btn v-if="!refreshReservesLoading" @click.stop="getReserves" icon color="textFaint">
-                <v-icon small>mdi-refresh</v-icon>
-              </v-btn>
-              <div v-else style="height: 36px; width: 36px;" class="d-flex align-center justify-center">
-                <v-progress-circular
-                indeterminate
-                size="14"
-                width="2"
-                color="primary">
-                </v-progress-circular>
-              </div>
-            </div>
-            <div class="ml-1 mr-5 text-right" style="width: 100px"> 
-              <div class=" caption textFaint--text font-weight-medium"> {{ token1Symbol }} </div>
-              <div class="font-weight-bold"> {{ reserve1Human }} </div>
-            </div>
+        <div class="d-flex align-center font-weight-bold">
+          <div class="flex text-center" style="flex: 110 1 0%">
+            <div class="caption textFaint--text pt-1">{{ token0Symbol }}</div>
+            {{ reserve0Human }}
+          </div>
+          <div>
+            <button
+              type="button"
+              class="v-btn v-btn--icon v-btn--round theme--light v-size--default textFaint--text"
+            >
+              <span class="v-btn__content"
+                ><i
+                  aria-hidden="true"
+                  class="v-icon notranslate mdi mdi-refresh theme--light"
+                  style="font-size: 16px"
+                ></i
+              ></span>
+            </button>
+          </div>
+          <div class="flex text-center" style="flex: 110 1 0%">
+            <div class="caption textFaint--text pt-1">{{ token1Symbol }}</div>
+            {{ reserve1Human }}
           </div>
         </div>
+
         <div class="d-flex align-center justify-center text-center">
           <v-btn rounded text color="textFaint" @click="$root.ammLinkTwo(`/pair/${item.address}`, cExchange)" style="border: 1px solid #a9a9a92e">
             VIEW LOCK
