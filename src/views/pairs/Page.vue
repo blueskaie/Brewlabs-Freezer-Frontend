@@ -261,7 +261,7 @@ export default {
     items: [],
     page: 0,
     filters: {
-      rowsPerPage: 20,
+      rowsPerPage: 5,
       sort: 'lock_value',
       sortAscending: false,
       search: ''
