@@ -122,7 +122,7 @@
           </v-btn>
           <v-btn v-if="dextLink" text color="textFaint" rounded :href="dextLink" target="_blank">
             <img 
-            src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x26CE25148832C04f3d7F26F32478a9fe55197166/logo.png" 
+            src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xfB7B4564402E5500dB5bB6d63Ae671302777C75a/logo.png" 
             height="14px"
             width="14px"
             class="mr-1">
