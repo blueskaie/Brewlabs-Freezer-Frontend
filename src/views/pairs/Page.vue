@@ -81,10 +81,10 @@
         <div class="mb-5 d-flex align-center inputcolor pa-3 r-outlined br-20">
           <img 
           :src="$settings.AMMS[this.$store.state.exchange].icon" 
-          height="20px"
-          width="20px"
+          height="20"
+          width="20"
           class="mr-2 br-20">
-          <c-input :value.sync="filters.search" placeholder="Pair name or address...">
+          <c-input :value="filters.search" placeholder="Pair name or address...">
           </c-input>
 
           <v-progress-circular
@@ -114,9 +114,9 @@
           >
             <template v-slot:activator="{ attrs, on }">
               <v-btn
+                v-bind="attrs"
                 small
                 rounded outlined color="primary" class=""
-                v-bind="attrs"
                 v-on="on"
                 style="min-width: 74px;"
               >
@@ -201,8 +201,8 @@
         color="#aaa">
           <img 
           src="@/assets/img/BF_fill.png" 
-          height="70px"
-          width="70px"
+          height="70"
+          width="70"
           class="greyscale">
         </v-progress-circular>
       </div>

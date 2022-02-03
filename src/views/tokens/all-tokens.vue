@@ -8,7 +8,7 @@
       </div>
 
       <div :class="['d-flex align-center pa-3 r-outlined br-c mx-2', {'inputcolor': $vuetify.breakpoint.xs}, {'inputcolor': !$vuetify.breakpoint.xs}]">
-        <c-input :value.sync="filters.search" placeholder="Token name or address..." class="">
+        <c-input :value="filters.search" placeholder="Token name or address..." class="">
         </c-input>
 
         <v-progress-circular
@@ -47,9 +47,9 @@
         >
           <template v-slot:activator="{ attrs, on }">
             <v-btn
+              v-bind="attrs"
               small
               rounded text color="" class=""
-              v-bind="attrs"
               v-on="on"
               style="min-width: 74px;"
             >
@@ -137,9 +137,9 @@
             >
               <template v-slot:activator="{ attrs, on }">
                 <v-btn
+                  v-bind="attrs"
                   small
                   rounded outlined :color="filters.minVolume !== '0' ? 'primary' : 'textFaint'" class=""
-                  v-bind="attrs"
                   v-on="on"
                   style="min-width: 74px;"
                 >
@@ -186,8 +186,8 @@
         <img 
         src="@/assets/img/BF_fill.png"
         class="greyscale"
-        height="70px"
-        width="70px">
+        height="70"
+        width="70">
       </v-progress-circular>
     </div>
 

@@ -5,14 +5,14 @@
       Incubated by Unicrypt
       <img 
       src="@/assets/img/icons/rocket.svg" 
-      height="30px"
-      width="30px"
+      height="30"
+      width="30"
       class="ml-2 br-c primary-pulse">
     </div>
 
     <div :class="[{'pa-6': !$vuetify.breakpoint.xs}, {'pa-4': $vuetify.breakpoint.xs}]">
 
-      <template>
+      <div>
 
         <div v-if="presale.stage === 0" :class="`caption font-weight-bold text-center ${textColor}--text`">
           <template v-if="!firstLoad">
@@ -71,9 +71,9 @@
               </div>
               <img 
               src="@/assets/img/flags/close.svg" 
-              height="16px"
+              height="16"
               class="mr-2"
-              width="16px">
+              width="16">
               <span>
                 Flagged
               </span>
@@ -84,9 +84,9 @@
               </div>
               <img 
               src="@/assets/img/flags/exclamation.svg" 
-              height="16px"
+              height="16"
               class="mr-2"
-              width="16px">
+              width="16">
               <span>
                 Minor flags
               </span>
@@ -97,9 +97,9 @@
               </div>
               <img 
               src="@/assets/img/flags/verified.svg" 
-              height="16px"
+              height="16"
               class="mr-2"
-              width="16px">
+              width="16">
               <span>
                 Audited
               </span>
@@ -110,9 +110,9 @@
               </div>
               <img 
               src="@/assets/img/flags/close.svg" 
-              height="16px"
+              height="16"
               class="mr-2"
-              width="16px">
+              width="16">
               <span>
                 Audited
               </span>
@@ -124,9 +124,9 @@
             </div>
             <img 
             src="@/assets/img/flags/magnify.svg" 
-            height="16px"
+            height="16"
             class="mr-2"
-            width="16px">
+            width="16">
             <span>
               KYC
             </span>
@@ -137,9 +137,9 @@
             </div>
             <img 
             src="@/assets/img/flags/close.svg" 
-            height="16px"
+            height="16"
             class="mr-2"
-            width="16px">
+            width="16">
             <span>
               KYC
             </span>
@@ -162,7 +162,7 @@
           </div>
 
         </div>
-      </template>
+      </div>
 
       <!-- {{ dateEndBlockHuman }} {{ dateStartBlockHuman }} -->
 

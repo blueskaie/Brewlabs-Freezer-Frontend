@@ -11,7 +11,7 @@
       <template v-if="sEthers.coinbase">
 
         <div class="mt-2 d-flex align-center pa-3 br-20 inputcolor">
-          <c-input :value.sync="username" placeholder="Username...">
+          <c-input :value="username" placeholder="Username...">
           </c-input>
 
           <v-progress-circular
@@ -58,8 +58,8 @@
           <v-col cols="5">
             <img 
             src="@/assets/img/UNCL.svg" 
-            height="40px"
-            width="40px">
+            height="40"
+            width="40">
             <div class="title">
               50 UNCL
             </div>
@@ -82,8 +82,8 @@
           <v-col cols="5">
             <img 
             src="@/assets/img/BF_fill.png" 
-            height="40px"
-            width="40px">
+            height="40"
+            width="40">
             <div class="title">
               3 UNCX
             </div>

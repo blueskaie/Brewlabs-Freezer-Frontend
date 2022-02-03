@@ -38,7 +38,7 @@
         </div>
 
         <div class="d-flex align-center">
-          <c-input :value.sync="amountHuman" placeholder="0.0" @updateWhileFocussed="onHumanAmountChange" class="pa-2 font-weight-bold">
+          <c-input :value="amountHuman" placeholder="0.0" @updateWhileFocussed="onHumanAmountChange" class="pa-2 font-weight-bold">
 
           </c-input>
 
@@ -92,9 +92,9 @@
             <div class="d-flex align-center mb-2">
               <img 
               src="@/assets/img/flags/exclamation.svg" 
-              height="26px"
+              height="26"
               class="mr-2"
-              width="26px">
+              width="26">
               Safety Alert
             </div>
             <div class="caption font-weight-bold">

@@ -21,7 +21,7 @@
       offset-y
       >
       <template v-slot:activator="{ on, attrs }">
-        <v-btn icon outlined color="textFaint" class="ml-1" depressed v-bind="attrs" v-on="on">
+        <v-btn v-bind="attrs" icon outlined color="textFaint" class="ml-1" depressed v-on="on">
           <slot name="header">
             <v-icon>mdi-cube-outline</v-icon>
           </slot>
@@ -33,7 +33,7 @@
           Block number
         </div>
         <div class="mt-2 d-flex align-center pa-3 r-outlined br-20 inputcolor">
-          <c-input :value.sync="localBlock" placeholder="Token address...">
+          <c-input :value="localBlock" placeholder="Token address...">
           </c-input>
         </div>
         <div class="caption text-center textFaint--text">

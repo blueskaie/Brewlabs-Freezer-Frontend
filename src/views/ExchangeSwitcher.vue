@@ -10,8 +10,8 @@
                 <div class="font-weight-bold title d-flex align-center justify-center">
                   <img 
                   :src="$settings.AMMS[this.$store.state.exchange].icon" 
-                  height="24px"
-                  width="24px"
+                  height="24"
+                  width="24"
                   class="mr-3 br-20">
                   {{ $store.state.exchange }}
                   <v-icon small color="">mdi-chevron-down</v-icon>

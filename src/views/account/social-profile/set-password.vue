@@ -8,7 +8,7 @@
       Setting a password allows you to log in to the same account from multiple devices
     </div>
     <div class="mt-2 d-flex align-center pa-3 br-20 inputcolor">
-      <c-input :value.sync="password" :type="textType" placeholder="Password...">
+      <c-input :value="password" :type="textType" placeholder="Password...">
       </c-input>
       
       <v-icon v-if="password.length > 0" @click="password = ''" class="mr-2" tabindex="-1">
@@ -24,7 +24,7 @@
 
     </div>
     <div class="mt-2 d-flex align-center pa-3 br-20 inputcolor">
-      <c-input :value.sync="confirmPassword" :type="textType" placeholder="Confirm password...">
+      <c-input :value="confirmPassword" :type="textType" placeholder="Confirm password...">
       </c-input>
       
       <v-icon v-if="confirmPassword.length > 0" @click="confirmPassword = ''" class="mr-2" tabindex="-1">

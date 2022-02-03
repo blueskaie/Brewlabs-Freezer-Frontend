@@ -13,7 +13,7 @@
           Check if an address is whitelisted
         </div>
         <div class="mt-2 d-flex align-center pa-3 br-20 inputcolor">
-          <c-input :value.sync="checkUserAddress" placeholder="0x...">
+          <c-input :value="checkUserAddress" placeholder="0x...">
           </c-input>
           <v-btn outlined rounded @click="checkAddress">
             Check

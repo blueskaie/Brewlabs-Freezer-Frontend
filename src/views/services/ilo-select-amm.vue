@@ -7,8 +7,8 @@
         <div class="text-center">
           <img 
           src="@/assets/img/icons/rocket.svg" 
-          height="60px"
-          width="60px"
+          height="60"
+          width="60"
           class="">
         </div>
 
@@ -23,8 +23,8 @@
           <v-btn large block outlined @click="$root.$dialog.chainSwitcher.open()" class="title">
             <img 
             :src="$settings.CHAINS[$store.state.requiredNetwork].icon" 
-            height="24px"
-            width="24px"
+            height="24"
+            width="24"
             class="mr-3 br-20">
             {{ $settings.CHAIN_DISPLAY_NAME[$store.state.requiredNetwork] }}
             <v-icon small color="">mdi-chevron-down</v-icon>
@@ -38,8 +38,8 @@
         <div v-for="amm of amms" :key="amm" class="v-card d-flex align-center title c-list pa-4 br-20 mb-2" @click="selectExchange(amm)">
           <img 
           :src="$settings.AMMS[amm].icon" 
-          height="40px"
-          width="40px"
+          height="40"
+          width="40"
           class="mr-3 br-20">
           <div>
             <div class="title">

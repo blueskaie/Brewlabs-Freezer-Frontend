@@ -79,8 +79,8 @@
           <v-card class="pa-4 d-flex align-center c-list mb-1">
             <img 
             src="@/assets/img/UNCBOT.svg" 
-            height="24px"
-            width="24px">
+            height="24"
+            width="24">
             <div class="ml-4">
               <div>
                 UNCBOT

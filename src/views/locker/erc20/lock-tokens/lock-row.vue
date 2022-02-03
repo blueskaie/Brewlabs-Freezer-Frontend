@@ -18,9 +18,9 @@
         <v-tooltip bottom>
           <template v-slot:activator="{ on, attrs }">
             <v-btn
+              v-bind="attrs"
               icon
               small
-              v-bind="attrs"
               v-on="on"
               @click.stop="$emit('duplicate')"
             >
@@ -33,9 +33,9 @@
         <v-tooltip bottom>
           <template v-slot:activator="{ on, attrs }">
             <v-btn
+              v-bind="attrs"
               icon
               small
-              v-bind="attrs"
               v-on="on"
               @click.stop="$emit('remove-lock')"
             >
@@ -119,7 +119,7 @@
                   *Allow someone else to withdraw these tokens after the lock date.
                 </div>
                 <div class="mt-2 d-flex align-center pa-3 r-outlined br-8 inputcolor">
-                  <c-input :value.sync="lock.owner" placeholder="Unlocker address">
+                  <c-input :value="lock.owner" placeholder="Unlocker address">
                   </c-input>
                 </div>
                 <div v-if="ownerIsValid" class="justify-center caption primary--text d-flex align-center">
@@ -144,7 +144,7 @@
               </div>
 
               <div class="d-flex align-center">
-                <c-input :value.sync="amountHuman" placeholder="0.0" @updateWhileFocussed="onHumanAmountChange" class="pa-2 font-weight-bold">
+                <c-input :value="amountHuman" placeholder="0.0" @updateWhileFocussed="onHumanAmountChange" class="pa-2 font-weight-bold">
 
                 </c-input>
 
@@ -256,9 +256,9 @@
               <v-menu offset-y open-on-hover transition="scale-transition" max-width="400px">
                 <template v-slot:activator="{ on, attrs }">
                   <v-icon
+                    v-bind="attrs"
                     @click.stop
                     small
-                    v-bind="attrs"
                     v-on="on"
                     color="textFaint"
                     class="ml-1"
@@ -296,7 +296,7 @@
                     Read about this feature
                   </div>
                   <div class="mt-2 d-flex align-center pa-3 r-outlined br-8 inputcolor">
-                    <c-input :value.sync="lock.condition" placeholder="Condition contract address">
+                    <c-input :value="lock.condition" placeholder="Condition contract address">
                     </c-input>
                   </div>
                   <div v-if="!conditionAddressIsValid" class="justify-center caption orange--text d-flex align-center">

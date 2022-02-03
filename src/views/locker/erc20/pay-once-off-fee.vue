@@ -30,9 +30,9 @@
     <div v-if="eInsufficientBalanceForFee" class="d-flex align-center font-weight-medium background pa-4 br-8 mt-2" style="position: relative; overflow: hidden;">
       <img 
       src="@/assets/img/flags/close.svg" 
-      height="26px"
+      height="26"
       class="mr-2"
-      width="26px">
+      width="26">
       <div>
         <div class="caption">
           You do not have enough {{ freeLockingToken.symbol }} in your wallet to perform this transaction.

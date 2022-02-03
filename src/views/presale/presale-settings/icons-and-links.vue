@@ -15,7 +15,7 @@
       e.g. https://i.imgur.com/HTdrQ38.png
     </div>
     <div class="mt-2 d-flex align-center pa-3 br-20 inputcolor">
-      <c-input :value.sync="iconURL" placeholder="https://">
+      <c-input :value="iconURL" placeholder="https://">
       </c-input>
     </div>
     <div class="caption textFaint--text text-end">
@@ -29,7 +29,7 @@
       e.g. https://www.unicrypt.network
     </div>
     <div class="mt-2 d-flex align-center pa-3 br-20 inputcolor">
-      <c-input :value.sync="websiteURL" placeholder="https://">
+      <c-input :value="websiteURL" placeholder="https://">
       </c-input>
     </div>
     <div class="caption textFaint--text text-end">
@@ -46,7 +46,7 @@
       e.g. #
     </div>
     <div class="mt-2 d-flex align-center pa-3 br-20 inputcolor">
-      <c-input :value.sync="telegramURL" placeholder="https://">
+      <c-input :value="telegramURL" placeholder="https://">
       </c-input>
     </div>
     <div class="caption textFaint--text text-end">
@@ -63,7 +63,7 @@
       e.g. #
     </div>
     <div class="mt-2 d-flex align-center pa-3 br-20 inputcolor">
-      <c-input :value.sync="twitterURL" placeholder="https://">
+      <c-input :value="twitterURL" placeholder="https://">
       </c-input>
     </div>
     <div class="caption textFaint--text text-end">

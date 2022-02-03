@@ -16,7 +16,7 @@
 
         <div  class="pa-1">
 
-          <template>
+          <div>
             <div class="pa-1 align-center flex-nowrap inputcolor r-outlined">
               <div class="caption text-end mr-3 pt-2">
                 <div v-if="false" class="textFaint--text font-italic">
@@ -27,7 +27,7 @@
                 </div>
               </div>
               <div class="d-flex align-center">
-                <c-input :value.sync="amountHuman" placeholder="0.0" @updateWhileFocussed="onHumanAmountChange" class="pa-2 title font-weight-bold">
+                <c-input :value="amountHuman" placeholder="0.0" @updateWhileFocussed="onHumanAmountChange" class="pa-2 title font-weight-bold">
                 </c-input>
                 <span class="mr-2">
                   {{ tokenHydrated.symbol }}
@@ -37,7 +37,7 @@
                 </v-btn>
               </div>
             </div>
-          </template>
+          </div>
 
         </div>
 

@@ -8,10 +8,10 @@
       >
         <template v-slot:activator="{ attrs, on }">
           <v-btn
+            v-bind="attrs"
             small
             text
             rounded :color="color" class="pa-0 pl-1 pr-1"
-            v-bind="attrs"
             v-on="on"
           >
             {{ tokenAddressCondensed }}

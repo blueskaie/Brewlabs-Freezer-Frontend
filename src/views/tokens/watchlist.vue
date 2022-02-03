@@ -24,8 +24,8 @@
         color="#aaa">
           <img 
           src="@/assets/img/BF_fill.png" 
-          height="70px"
-          width="70px"
+          height="70"
+          width="70"
           class="greyscale">
         </v-progress-circular>
       </div>

@@ -30,9 +30,9 @@
         color="#aaa">
           <img 
           src="@/assets/img/BF_fill.png" 
-          height="50px"
+          height="50"
           class="greyscale"
-          width="50px">
+          width="50">
         </v-progress-circular>
       </div>
 

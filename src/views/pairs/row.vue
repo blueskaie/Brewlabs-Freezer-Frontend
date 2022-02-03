@@ -123,8 +123,8 @@
           <v-btn v-if="dextLink" text color="textFaint" rounded :href="dextLink" target="_blank">
             <img 
             src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xfB7B4564402E5500dB5bB6d63Ae671302777C75a/logo.png" 
-            height="14px"
-            width="14px"
+            height="14"
+            width="14"
             class="mr-1">
             Dext
             <v-icon x-small>mdi-arrow-top-right</v-icon>

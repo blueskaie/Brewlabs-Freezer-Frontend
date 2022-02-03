@@ -15,8 +15,8 @@
         <img 
         v-if="true"
         src="@/assets/img/BF_fill.png"
-        height="40px"
-        width="40px"
+        height="40"
+        width="40"
         class="mr-2">
 
         <div v-if="true" class="mr-6" style="font-size: 1.2rem;">
@@ -262,8 +262,8 @@
         <div>
           <img 
           src="@/assets/img/unicrypt_network.png" 
-          height="160px"
-          width="320px">
+          height="160"
+          width="320">
           <div v-if="false" class="textFaint--text" style="letter-spacing: 0.5rem!important;">
             DEFI SERVICES
           </div>
@@ -283,8 +283,8 @@
               <div class="text-center">
                 <img 
                 :src="$settings.CHAINS[$store.state.requiredNetwork].icon" 
-                height="34px"
-                width="34px"
+                height="34"
+                width="34"
                 class="br-20">
               </div>
               <div class="caption font-italic textFaint--text">

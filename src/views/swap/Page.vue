@@ -59,7 +59,7 @@
                     <v-spacer></v-spacer>
                     <img 
                     src="@/assets/img/UNC_old.svg" 
-                    width="32px"
+                    width="32"
                     class="mr-1">
                     UNC
                   </div>
@@ -75,7 +75,7 @@
                     <v-spacer></v-spacer>
                     <img 
                     src="@/assets/img/BF_fill.png" 
-                    width="32px"
+                    width="32"
                     class="mr-1">
                     UNCX
                   </div>

@@ -25,7 +25,7 @@
       </div>
 
       <div :class="['mb-5 mt-2 d-flex align-center pa-3 r-outlined br-c', {'foreground': $vuetify.breakpoint.xs}, {'inputcolor': !$vuetify.breakpoint.xs}]">
-        <c-input :value.sync="filters.search" placeholder="Search token name or address...">
+        <c-input :value="filters.search" placeholder="Search token name or address...">
         </c-input>
 
         <v-progress-circular
@@ -92,9 +92,9 @@
         >
           <template v-slot:activator="{ attrs, on }">
             <v-btn
+              v-bind="attrs"
               small
               rounded text color="" class=""
-              v-bind="attrs"
               v-on="on"
               style="min-width: 74px;"
             >
@@ -151,9 +151,9 @@
         >
           <template v-slot:activator="{ attrs, on }">
             <v-btn
+              v-bind="attrs"
               small
               rounded outlined color="" class="textFaint--text"
-              v-bind="attrs"
               v-on="on"
               style="min-width: 74px;"
             >
@@ -202,18 +202,18 @@
           <img 
           v-if="filters.hide_flagged"
           src="@/assets/img/flags/magnify.svg" 
-          height="16px"
+          height="16"
           class="mr-2"
-          width="16px">
+          width="16">
           <v-icon v-else size="16" class="mr-2" color="text">mdi-checkbox-blank-circle-outline</v-icon>
           KYC only
         </v-btn>
         <v-menu offset-y open-on-hover transition="scale-transition" max-width="300px">
           <template v-slot:activator="{ on, attrs }">
             <v-icon
+              v-bind="attrs"
               @click.stop
               small
-              v-bind="attrs"
               v-on="on"
               color="textFaint"
               class="ml-1"
@@ -236,9 +236,9 @@
         color="#aaa">
           <img 
           src="@/assets/img/BF_fill.png" 
-          height="50px"
+          height="50"
           class="greyscale"
-          width="50px">
+          width="50">
         </v-progress-circular>
       </div>
 
@@ -246,7 +246,7 @@
 
         <presale-row
         v-for="presale of items"
-        @click.native="$root.ammLink(`/ilo/${presale.presale_contract}`)"
+       @click="$root.ammLink(`/ilo/${presale.presale_contract}`)"
         :key="presale.presale_contract"
         :presale="presale"
         >
@@ -262,8 +262,8 @@
             <div v-if="filters.hide_flagged" class="d-flex align-center background br-20 pa-4">
               <img 
               src="@/assets/img/flags/magnify.svg" 
-              height="40px"
-              width="40px">
+              height="40"
+              width="40">
               <div class="ml-3">
                 No KYC'd {{ $store.state.exchange }} presales here, disabling the KYC filters will show Anon team presales.
               </div>

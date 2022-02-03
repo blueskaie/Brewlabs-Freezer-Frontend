@@ -36,8 +36,8 @@
 
     <keep-alive>
       <lock-page v-if="tab === 0"></lock-page>
-      <withdraw-page v-if="tab === 1"></withdraw-page>
-      <info-page v-if="tab === 2"></info-page>
+      <withdraw-page v-else-if="tab === 1"></withdraw-page>
+      <info-page v-else-if="tab === 2"></info-page>
     </keep-alive>
 
   </v-container>

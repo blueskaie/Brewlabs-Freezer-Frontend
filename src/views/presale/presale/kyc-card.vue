@@ -41,17 +41,17 @@
         <v-btn icon height="100px" width="100px" @click="rating = 0">
           <img 
           src="@/assets/img/flags/magnify.svg" 
-          height="80px"
+          height="80"
           :class="{'greyscale': rating !== 0}"
-          width="95px">
+          width="95">
         </v-btn>
 
         <v-btn icon height="100px" width="100px" @click="rating = 1">
           <img 
           src="@/assets/img/flags/close.svg" 
-          height="80px"
+          height="80"
           :class="{'greyscale': rating !== 1}"
-          width="80px">
+          width="80">
         </v-btn>
       </div>
 

@@ -16,13 +16,13 @@
 
         <div  class="pa-1">
 
-          <template>
+          <div>
             <div class="pa-1 align-center flex-nowrap inputcolor r-outlined">
               <div class="caption text-end mr-3 pt-2">
                 Balance: {{ tokenBalanceHuman }}
               </div>
               <div class="d-flex align-center">
-                <c-input :value.sync="amountHuman" placeholder="0.0" @updateWhileFocussed="onHumanAmountChange" class="pa-2 title font-weight-bold">
+                <c-input :value="amountHuman" placeholder="0.0" @updateWhileFocussed="onHumanAmountChange" class="pa-2 title font-weight-bold">
                 </c-input>
                 {{ tokenHydrated.symbol }}
                 <v-btn small outlined rounded @click="setMax" class="mr-2 grad-green white--text">
@@ -30,7 +30,7 @@
                 </v-btn>
               </div>
             </div>
-          </template>
+          </div>
 
         </div>
 

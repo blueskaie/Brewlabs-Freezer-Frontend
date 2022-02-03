@@ -11,8 +11,8 @@
       <div class="d-flex align-center c-list pa-4 border-b" @click="selectExchange('Pancakeswap V2')">
         <img 
         :src="getExchangeIcon('Pancakeswap V2')" 
-        height="40px"
-        width="40px"
+        height="40"
+        width="40"
         class="mr-3 br-20">
         <div>
           <div class="title">

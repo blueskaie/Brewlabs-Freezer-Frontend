@@ -14,8 +14,8 @@
         <div class="d-flex align-center c-list pa-4 border-b" @click="navigate">
           <img 
           src="@/assets/img/icons/padlock.png" 
-          height="60px"
-          width="60px"
+          height="60"
+          width="60"
           class="mr-3">
 
           <div>

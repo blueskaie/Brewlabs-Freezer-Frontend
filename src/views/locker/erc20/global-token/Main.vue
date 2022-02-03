@@ -43,9 +43,9 @@
       color="#aaa">
         <img 
         src="@/assets/img/BF_fill.png" 
-        height="50px"
+        height="50"
         class="greyscale"
-        width="50px">
+        width="50">
       </v-progress-circular>
     </div>
     <v-expand-transition>
@@ -53,9 +53,9 @@
         <div v-if="locks.length === 0" class="pa-8 text-center">
           <img 
           src="@/assets/img/flags/exclamation.svg" 
-          height="26px"
+          height="26"
           class="mr-2"
-          width="26px">
+          width="26">
           <div>
             No Token Locks for this token
           </div>
@@ -106,9 +106,9 @@
                 >
                   <template v-slot:activator="{ attrs, on }">
                     <v-btn
+                      v-bind="attrs"
                       small
                       rounded outlined color="" class=""
-                      v-bind="attrs"
                       v-on="on"
                     >
                       <div class="mr-1 textFaint--text">

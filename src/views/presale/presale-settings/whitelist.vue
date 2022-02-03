@@ -62,7 +62,7 @@
           </div>
         </div>
         <div class="d-flex align-center inputcolor pa-2 pb-0 r-outlined">
-          <c-textarea :value.sync="whitelist" placeholder="0x09120912" rows="5"></c-textarea>
+          <c-textarea :value="whitelist" placeholder="0x09120912" rows="5"></c-textarea>
         </div>
         <v-btn @click="whitelistAdd" color="primary" x-large block depressed>
           Add to whitelist
@@ -86,7 +86,7 @@
           </div>
         </div>
         <div class="d-flex align-center inputcolor pa-2 pb-0 r-outlined">
-          <c-textarea :value.sync="unwhitelist" placeholder="0x09120912" rows="5"></c-textarea>
+          <c-textarea :value="unwhitelist" placeholder="0x09120912" rows="5"></c-textarea>
         </div>
 
         <v-btn @click="whitelistRemove" color="primary" x-large block depressed>

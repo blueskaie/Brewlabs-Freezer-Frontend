@@ -5,8 +5,8 @@
       <div :class="['d-flex align-center flex pa-3 c-list top-tab', {'background': tab === 0}]" @click="tab = 0">
         <img 
         src="@/assets/img/BF_fill.png" 
-        height="30px"
-        width="30px"
+        height="30"
+        width="30"
         class="mr-1">
         UNCX
         <span class="ml-2 primary--text font-weight-medium">${{ Number(uncx.priceUSD).toFixed(2) }} </span>
@@ -14,8 +14,8 @@
       <div :class="['d-flex align-center flex pa-3 c-list top-tab', {'background': tab === 1}]" @click="tab = 1">
         <img 
         src="@/assets/img/UNCL.svg" 
-        height="30px"
-        width="30px"
+        height="30"
+        width="30"
         class="mr-1">
         UNCL
         <span class="ml-2 primary--text font-weight-medium">${{ Number(uncl.priceUSD).toFixed(2) }} </span>
@@ -90,8 +90,8 @@
             href="https://exchange.pancakeswap.finance/#/swap?inputCurrency=0x09a6c44c3947B69E2B45F4D51b67E6a39ACfB506" target="_blank">
               <img 
               :src="$root.$settings.AMMS['Pancakeswap V2'].icon" 
-              height="20px"
-              width="20px"
+              height="20"
+              width="20"
               class="mr-1">
               Pancakeswap
             </v-btn>
@@ -99,8 +99,8 @@
             href="https://app.uniswap.org/#/swap?inputCurrency=0xadb2437e6f65682b85f814fbc12fec0508a7b1d0" target="_blank">
               <img 
               :src="$root.$settings.AMMS['Uniswap V2'].icon" 
-              height="20px"
-              width="20px"
+              height="20"
+              width="20"
               class="mr-1">
               Uniswap
             </v-btn>
@@ -134,8 +134,8 @@
             href="https://exchange.pancakeswap.finance/#/swap?inputCurrency=0x0E8D5504bF54D9E44260f8d153EcD5412130CaBb" target="_blank">
               <img 
               :src="$root.$settings.AMMS['Pancakeswap V2'].icon" 
-              height="20px"
-              width="20px"
+              height="20"
+              width="20"
               class="mr-1">
               Pancakeswap
             </v-btn>
@@ -143,8 +143,8 @@
             href="https://app.uniswap.org/#/swap?inputCurrency=0x2f4eb47a1b1f4488c71fc10e39a4aa56af33dd49" target="_blank">
               <img 
               :src="$root.$settings.AMMS['Uniswap V2'].icon" 
-              height="20px"
-              width="20px"
+              height="20"
+              width="20"
               class="mr-1">
               Uniswap
             </v-btn>

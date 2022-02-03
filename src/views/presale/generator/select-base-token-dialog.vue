@@ -20,7 +20,7 @@
             </div>
 
             <div class="mt-2 d-flex align-center pa-3 r-outlined br-20 inputcolor">
-              <c-input :value.sync="tokenAddress" placeholder="Token address...">
+              <c-input :value="tokenAddress" placeholder="Token address...">
               </c-input>
 
               <v-progress-circular
@@ -34,7 +34,7 @@
             </div>
           </div>
 
-          <token-row v-for="item in coinList" :key="item.address" :item="item" @click.native="selectToken(item)">
+          <token-row v-for="item in coinList" :key="item.address" :item="item" @click="selectToken(item)">
           </token-row>
 
         </div>

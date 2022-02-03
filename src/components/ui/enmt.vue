@@ -3,9 +3,9 @@
   offset-y open-on-hover transition="scale-transition" max-width="300px">
     <template v-slot:activator="{ on, attrs }">
       <span 
+      v-bind="attrs"
       @click.stop
       small
-      v-bind="attrs"
       v-on="on"
       color="textFaint"
       class="white--text primary-pulse primary px-2 br-20 caption font-weight-bold">

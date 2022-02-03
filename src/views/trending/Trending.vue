@@ -16,16 +16,16 @@
           <buy-tokens></buy-tokens>
 
           <div v-if="numPresales > 0" class="v-card br-20 mb-4">
-            <template>
+            <div>
               <div class="title d-flex align-center text-center mb-1 mb-6 background pa-4">
                 <img 
                 src="@/assets/img/icons/rocket.svg" 
-                height="40px"
-                width="40px"
+                height="40"
+                width="40"
                 class="mr-4">
                 Unicrypt Incubated ILOs
               </div>
-            </template>
+            </div>
 
             <div class="pa-2">
               <template v-for="exchange of Object.keys(presales)">
@@ -33,8 +33,8 @@
                   <div v-if="false" class="pa-2 d-flex align-center" :key="`${exchange}-ilo`">
                     <img 
                     :src="$settings.AMMS[exchange].icon" 
-                    height="26px"
-                    width="26px"
+                    height="26"
+                    width="26"
                     class="mr-2 br-20">
                     {{ exchange }}
                     <v-spacer></v-spacer>
@@ -48,7 +48,7 @@
 
                   </div>
                   <presale-row
-                  @click.native="goToPresale(presale)"
+                 @click="goToPresale(presale)"
                   v-for="presale of presales[exchange]" 
                   :key="presale.presale_contract"
                   :exchange="presale.exchange"
@@ -82,14 +82,14 @@
                     New Liquidity Locks (>100k)a
                   </div>
 
-                  <template v-for="exchange of Object.keys(locks)">
-                    <div :key="`${exchange}-lock`" class="">a
+                  <div v-for="exchange of Object.keys(locks)" :key="`${exchange}-lock`">
+                    <div class="">a
                       <div v-if="false" class="pr-4 border-b d-flex align-center text-center py-2">
                         <v-btn color="text" text rounded @click="goToLocks(exchange)">
                           <img 
                           :src="$settings.AMMS[exchange].icon" 
-                          height="24px"
-                          width="24px"
+                          height="24"
+                          width="24"
                           class="mr-2 br-20">
                           {{ exchange }}
                           <v-icon small>
@@ -114,7 +114,7 @@
                       :item="item">
                       </lock-row>
                     </div>
-                  </template>
+                  </div>
 
                 </div>
               </v-scroll-y-transition>
@@ -153,8 +153,8 @@
               <div class="pa-3 d-flex align-center">
                 <img 
                 :src="$settings.CHAINS['Mainnet'].icon" 
-                height="24px"
-                width="24px"
+                height="24"
+                width="24"
                 class="mr-3 br-20">
                 Mainnet
               </div>
@@ -165,8 +165,8 @@
               <div class="pa-3 d-flex align-center">
                 <img 
                 :src="$settings.CHAINS['BSC_MAINNET'].icon" 
-                height="24px"
-                width="24px"
+                height="24"
+                width="24"
                 class="mr-3 br-20">
                 Binance smart chain
               </div>
@@ -177,8 +177,8 @@
               <div class="pa-3 d-flex align-center">
                 <img 
                 :src="$settings.CHAINS['xDai'].icon" 
-                height="24px"
-                width="24px"
+                height="24"
+                width="24"
                 class="mr-3 br-20">
                 xDai
               </div>
@@ -189,8 +189,8 @@
               <div class="pa-3 d-flex align-center">
                 <img 
                 :src="$settings.CHAINS['Matic'].icon" 
-                height="24px"
-                width="24px"
+                height="24"
+                width="24"
                 class="mr-3 br-20">
                 Matic
               </div>
@@ -201,8 +201,8 @@
               <div class="pa-3 d-flex align-center">
                 <img 
                 :src="$settings.CHAINS['Kovan'].icon" 
-                height="24px"
-                width="24px"
+                height="24"
+                width="24"
                 class="mr-3 br-20">
                 Kovan
               </div>
@@ -258,8 +258,8 @@
           <div class="text-center mt-10">
             <img 
             src="@/assets/img/icons/rocket.svg" 
-            height="40px"
-            width="40px"
+            height="40"
+            width="40"
             class="">
             <div class="text-center title mb-4">
               Unicrypt Incubated ILOs
@@ -272,8 +272,8 @@
                 <div v-if="false" class="pa-2 d-flex align-center" :key="`${exchange}-ilo`">
                   <img 
                   :src="$settings.AMMS[exchange].icon" 
-                  height="26px"
-                  width="26px"
+                  height="26"
+                  width="26"
                   class="mr-2 br-20">
                   {{ exchange }}
                   <v-spacer></v-spacer>
@@ -287,7 +287,7 @@
 
                 </div>
                 <presale-row
-                @click.native="goToPresale(presale)"
+               @click="goToPresale(presale)"
                 v-for="presale of presales[exchange]" 
                 :key="presale.presale_contract"
                 :exchange="presale.exchange"
@@ -316,22 +316,22 @@
             <div class="text-center mt-10">
               <img 
               src="@/assets/img/icons/padlock.png" 
-              height="40px"
-              width="40px"
+              height="40"
+              width="40"
               class="greyscale">
               <div class="text-center textFaint--text mb-4">
                 New Liquidity Locks (>100k)
               </div>
             </div>
 
-            <template v-for="exchange of Object.keys(locks)">
-              <div :key="`${exchange}-lock`" class="">
+            <div v-for="exchange of Object.keys(locks)" :key="`${exchange}-lock`">
+              <div  class="">
                 <div v-if="false" class="pr-4 border-b d-flex align-center text-center py-2">
                   <v-btn color="text" text rounded @click="goToLocks(exchange)">
                     <img 
                     :src="$settings.AMMS[exchange].icon" 
-                    height="24px"
-                    width="24px"
+                    height="24"
+                    width="24"
                     class="mr-2 br-20">
                     {{ exchange }}
                     <v-icon small>
@@ -356,15 +356,15 @@
                 :item="item">
                 </lock-row>
               </div>
-            </template>
+            </div>
 
             <div>
 
               <div class="text-center mt-10">
                 <img 
                 src="@/assets/img/icons/padlock.png" 
-                height="40px"
-                width="40px"
+                height="40"
+                width="40"
                 class="greyscale">
                 <div class="text-center textFaint--text mb-4">
                   New Token Locks
@@ -375,8 +375,8 @@
                 <div class="pa-3 d-flex align-center justify-center">
                   <img 
                   :src="$settings.CHAINS['Mainnet'].icon" 
-                  height="24px"
-                  width="24px"
+                  height="24"
+                  width="24"
                   class="mr-3 br-20">
                   Mainnet
                 </div>
@@ -387,8 +387,8 @@
                 <div class="pa-3 d-flex align-center justify-center">
                   <img 
                   :src="$settings.CHAINS['BSC_MAINNET'].icon" 
-                  height="24px"
-                  width="24px"
+                  height="24"
+                  width="24"
                   class="mr-3 br-20">
                   Binance smart chain
                 </div>
@@ -399,8 +399,8 @@
                 <div class="pa-3 d-flex align-center justify-center">
                   <img 
                   :src="$settings.CHAINS['xDai'].icon" 
-                  height="24px"
-                  width="24px"
+                  height="24"
+                  width="24"
                   class="mr-3 br-20">
                   xDai
                 </div>
@@ -411,8 +411,8 @@
                 <div class="pa-3 d-flex align-center justify-center">
                   <img 
                   :src="$settings.CHAINS['Matic'].icon" 
-                  height="24px"
-                  width="24px"
+                  height="24"
+                  width="24"
                   class="mr-3 br-20">
                   Matic
                 </div>
@@ -423,8 +423,8 @@
                 <div class="pa-3 d-flex align-center justify-center">
                   <img 
                   :src="$settings.CHAINS['Kovan'].icon" 
-                  height="24px"
-                  width="24px"
+                  height="24"
+                  width="24"
                   class="mr-3 br-20">
                   Kovan
                 </div>

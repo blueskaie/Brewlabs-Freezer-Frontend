@@ -20,7 +20,7 @@
       <v-card outlined class="background blocks br-0 d-flex align-center pa-3">
         <img 
         src="@/assets/img/UNCL.svg"
-        width="40px"
+        width="40"
         class="">
         <div class="ml-3" style="flex: 1;">
           <div class="caption d-flex align-center white--text font-weight-medium">

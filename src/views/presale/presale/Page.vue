@@ -11,9 +11,9 @@
               <div class="d-flex align-center mb-2 orange--text">
                 <img 
                 src="@/assets/img/flags/exclamation.svg" 
-                height="26px"
+                height="26"
                 class="mr-2"
-                width="26px">
+                width="26">
                 Safety Alert
               </div>
               <div class="caption textFaint--text font-weight-medium">
@@ -106,9 +106,9 @@
             </div>
             <img 
             src="@/assets/img/flags/close.svg" 
-            height="26px"
+            height="26"
             class="mr-2"
-            width="26px">
+            width="26">
             <div>
               <div>
                 This token has been flagged by independant auditors. Please check the Audit tab for details.
@@ -121,9 +121,9 @@
             </div>
             <img 
             src="@/assets/img/flags/exclamation.svg" 
-            height="26px"
+            height="26"
             class="mr-2"
-            width="26px">
+            width="26">
             <div>
               <div>
                 This token has minor warnings from independant auditors. Please check the Audit tab for details.
@@ -136,9 +136,9 @@
             </div>
             <img 
             src="@/assets/img/flags/verified.svg" 
-            height="26px"
+            height="26"
             class="mr-2"
-            width="26px">
+            width="26">
             <div>
               <div>
                 This tokens contract has been checked for exploits by third party auditors. See the audit tab for more details.
@@ -151,9 +151,9 @@
             </div>
             <img 
             src="@/assets/img/flags/close.svg" 
-            height="26px"
+            height="26"
             class="mr-2"
-            width="26px">
+            width="26">
             <div>
               <div>
                 This token has no audits on Unicrypt.
@@ -166,9 +166,9 @@
             </div>
             <img 
             src="@/assets/img/flags/magnify.svg" 
-            height="26px"
+            height="26"
             class="mr-2"
-            width="26px">
+            width="26">
             <div>
               <div>
                 This team has passed KYC verification
@@ -181,9 +181,9 @@
             </div>
             <img 
             src="@/assets/img/flags/close.svg" 
-            height="26px"
+            height="26"
             class="mr-2"
-            width="26px">
+            width="26">
             <div>
               <div>
                 This team is anonymous / This is a high risk ILO
@@ -205,9 +205,9 @@
             color="#aaa">
               <img 
               src="@/assets/img/BF_fill.png" 
-              height="120px"
+              height="120"
               class="greyscale"
-              width="120px">
+              width="120">
             </v-progress-circular>
           </div>
 
@@ -504,8 +504,8 @@
                       color="primary">
                         <img 
                         src="@/assets/img/eth.png" 
-                        height="50px"
-                        width="50px">
+                        height="50"
+                        width="50">
                       </v-progress-circular>
 
                       <div class="title">
@@ -524,8 +524,8 @@
                       color="primary">
                         <img 
                         src="@/assets/img/eth.png" 
-                        height="50px"
-                        width="50px">
+                        height="50"
+                        width="50">
                       </v-progress-circular>
                       <div class="title">
                         {{ hardcapHuman }} {{ baseTokenSymbol }}
@@ -826,9 +826,9 @@
 
       <template v-slot:action="{ attrs }">
         <v-btn
+          v-bind="attrs"
           color="white"
           text
-          v-bind="attrs"
           @click="connectWallet"
         >
           Connect

@@ -11,8 +11,8 @@
           <v-btn large block text @click="$root.$dialog.chainSwitcher.open()" class="title font-weight-bold">
             <img 
             :src="$settings.CHAINS[$store.state.requiredNetwork].icon" 
-            height="24px"
-            width="24px"
+            height="24"
+            width="24"
             class="mr-3 br-20">
             {{ $settings.CHAIN_DISPLAY_NAME[$store.state.requiredNetwork] }}
             <v-icon small color="">mdi-chevron-down</v-icon>
@@ -71,8 +71,8 @@
                         {{ ethBalanceHuman }} {{ $store.state.nativeGasTokenSymbol }}
                         <img 
                         :src="$settings.CHAINS[$store.state.requiredNetwork].icon"
-                        height="16px"
-                        width="16px"
+                        height="16"
+                        width="16"
                         class="ml-2">
                       </v-btn>
                     </div>
@@ -90,8 +90,8 @@
                   <v-btn rounded text class="textFaint--text d-flex align-center pa-2 font-weight-regular" @click="expandCoinBalances = !expandCoinBalances">
                     <img 
                     src="@/assets/img/UNCL.svg" 
-                    height="24px"
-                    width="24px"
+                    height="24"
+                    width="24"
                     class="mr-2">
                     {{ unclBalanceHuman.combined }} UNCL
                     <v-icon small :class="[{'rotate-180': expandCoinBalances}]">mdi-chevron-down</v-icon>
@@ -101,8 +101,8 @@
                   <v-btn rounded text class="textFaint--text d-flex align-center pa-2 font-weight-regular" @click="expandCoinBalances = !expandCoinBalances">
                     <img 
                     src="@/assets/img/BF_fill.png" 
-                    height="24px"
-                    width="24px"
+                    height="24"
+                    width="24"
                     class="mr-2">
                     {{ uncxBalanceHuman.combined }} UNCX
                     <v-icon small :class="[{'rotate-180': expandCoinBalances}]">mdi-chevron-down</v-icon>

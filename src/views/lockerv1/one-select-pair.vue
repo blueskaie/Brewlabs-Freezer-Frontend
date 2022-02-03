@@ -9,8 +9,8 @@
       <div class="d-flex align-center title font-weight-bold mb-4">
         <img 
         :src="$settings.AMMS[$store.state.exchange].icon" 
-        height="40px"
-        width="40px"
+        height="40"
+        width="40"
         class="mr-3 br-20">
         {{ $store.state.exchange }} Locker
       </div>
@@ -48,7 +48,7 @@
         </div>
 
         <div class="mt-2 d-flex align-center pa-3 r-outlined br-20 inputcolor">
-          <c-input :value.sync="searchPair" :placeholder="`${$store.state.exchange} pair address...`">
+          <c-input :value="searchPair" :placeholder="`${$store.state.exchange} pair address...`">
           </c-input>
         </div>
 

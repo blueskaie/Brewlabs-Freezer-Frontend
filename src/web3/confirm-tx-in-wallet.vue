@@ -19,8 +19,8 @@
           >
           <img 
           src="@/assets/img/black_wings.png" 
-          height="68px"
-          width="68px">
+          height="68"
+          width="68">
 
           </v-progress-circular>
           <div class="mt-8">

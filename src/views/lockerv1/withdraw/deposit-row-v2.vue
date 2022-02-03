@@ -30,8 +30,8 @@
         >
           <template v-slot:activator="{ attrs, on }">
             <v-btn
-              icon :color="epochHasPassed ? 'white' : ''" class=""
               v-bind="attrs"
+              icon :color="epochHasPassed ? 'white' : ''" class=""
               large
               v-on="on"
             >

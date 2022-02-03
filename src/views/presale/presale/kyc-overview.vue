@@ -14,9 +14,9 @@
           </div>
           <img 
           src="@/assets/img/flags/close.svg" 
-          height="26px"
+          height="26"
           class="mr-2"
-          width="26px">
+          width="26">
           <span>
             Not KYC'd
           </span>
@@ -27,9 +27,9 @@
           </div>
           <img 
           src="@/assets/img/flags/magnify.svg" 
-          height="26px"
+          height="26"
           class="mr-2"
-          width="26px">
+          width="26">
           <span>
             Team is KYC verified
           </span>

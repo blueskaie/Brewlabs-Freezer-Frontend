@@ -46,9 +46,9 @@
       color="#aaa">
         <img 
         src="@/assets/img/BF_fill.png" 
-        height="50px"
+        height="50"
         class="greyscale"
-        width="50px">
+        width="50">
       </v-progress-circular>
     </div>
     <v-slide-y-transition>
@@ -65,9 +65,9 @@
           >
             <template v-slot:activator="{ attrs, on }">
               <v-btn
+                v-bind="attrs"
                 small
                 rounded outlined color="" class=""
-                v-bind="attrs"
                 v-on="on"
               >
                 <div class="mr-1 textFaint--text">

@@ -11,9 +11,9 @@
         color="#aaa">
           <img 
           src="@/assets/img/BF_fill.png" 
-          height="60px"
+          height="60"
           class="greyscale"
-          width="60px">
+          width="60">
         </v-progress-circular>
       </div>
 
@@ -169,9 +169,9 @@
             <div class="text-center">
               <img 
               src="@/assets/img/flags/exclamation.svg" 
-              height="26px"
+              height="26"
               class="mr-2"
-              width="26px">
+              width="26">
               <div>
                 No Liquidity Locks for this token
               </div>

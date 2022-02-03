@@ -6,8 +6,8 @@
         <div class="text-center">
           <img 
           src="@/assets/img/icons/padlock.png" 
-          height="60px"
-          width="60px"
+          height="60"
+          width="60"
           class="greyscale">
         </div>
 
@@ -34,8 +34,8 @@
           <v-btn large block outlined @click="$root.$dialog.chainSwitcher.open()" class="title">
             <img 
             :src="$settings.CHAINS[$store.state.requiredNetwork].icon" 
-            height="24px"
-            width="24px"
+            height="24"
+            width="24"
             class="mr-3 br-20">
             {{ $settings.CHAIN_DISPLAY_NAME[$store.state.requiredNetwork] }}
             <v-icon small color="">mdi-chevron-down</v-icon>
@@ -53,10 +53,10 @@
           <div :class="['mt-1 mb-2 d-flex align-center pa-3 r-outlined br-20 mx-2', {'foreground': $vuetify.breakpoint.xs}, {'inputcolor': !$vuetify.breakpoint.xs}]">
             <img 
             :src="$settings.CHAINS[$store.state.requiredNetwork].icon" 
-            height="20px"
-            width="20px"
+            height="20"
+            width="20"
             class="mr-2 br-20">
-            <c-input :value.sync="tokenAddress" placeholder="Token address..." class="">
+            <c-input :value="tokenAddress" placeholder="Token address..." class="">
             </c-input>
 
             <v-progress-circular
@@ -209,9 +209,9 @@
                     <div class="d-flex align-center mb-2">
                       <img 
                       src="@/assets/img/flags/exclamation.svg" 
-                      height="26px"
+                      height="26"
                       class="mr-2"
-                      width="26px">
+                      width="26">
                       Attention!
                     </div>
                     <div class="caption font-weight-bold">
@@ -226,9 +226,9 @@
                 </div>
                 <img 
                 src="@/assets/img/flags/close.svg" 
-                height="26px"
+                height="26"
                 class="mr-2"
-                width="26px">
+                width="26">
                 <div>
                   <div class="caption">
                     You do not have enough {{ tokenHydrated.symbol }} for this transaction.

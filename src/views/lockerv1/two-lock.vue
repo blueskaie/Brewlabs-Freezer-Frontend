@@ -42,7 +42,7 @@
             </div>
 
             <div class="d-flex align-center">
-              <c-input :value.sync="amountHuman" placeholder="0.0" @updateWhileFocussed="onHumanAmountChange" class="pa-2 font-weight-bold">
+              <c-input :value="amountHuman" placeholder="0.0" @updateWhileFocussed="onHumanAmountChange" class="pa-2 font-weight-bold">
 
               </c-input>
 
@@ -104,7 +104,7 @@
 
           <v-slide-y-transition>
             <div v-if="!unlockerIsMe" class="mt-2 d-flex align-center pa-3 r-outlined br-8 inputcolor">
-              <c-input :value.sync="unlockerAccount" placeholder="Unlocker address">
+              <c-input :value="unlockerAccount" placeholder="Unlocker address">
               </c-input>
             </div>
           </v-slide-y-transition>
@@ -192,9 +192,9 @@
             </div>
             <img 
             src="@/assets/img/flags/close.svg" 
-            height="26px"
+            height="26"
             class="mr-2"
-            width="26px">
+            width="26">
             <div>
               <div class="caption">
                 You do not have enough {{ $store.state.nativeGasTokenSymbol }} in your wallet to perform this transaction.

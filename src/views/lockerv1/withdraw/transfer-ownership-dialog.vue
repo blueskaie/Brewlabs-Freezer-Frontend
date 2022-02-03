@@ -22,7 +22,7 @@
         </div>
 
         <div class="mt-2 d-flex align-center pa-3 r-outlined br-20 inputcolor">
-          <c-input :value.sync="unlockerAccount" placeholder="New owner address...">
+          <c-input :value="unlockerAccount" placeholder="New owner address...">
           </c-input>
         </div>
 

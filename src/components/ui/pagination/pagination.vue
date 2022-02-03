@@ -31,7 +31,7 @@
       style="max-width: 3em;"
       hide-details
       ></v-text-field>
-      <!-- <c-input :value.sync="localPage" style="max-width: 3em;">
+      <!-- <c-input :value="localPage" style="max-width: 3em;">
       </c-input> -->
 
       <v-btn
@@ -57,9 +57,9 @@
 
       <v-spacer></v-spacer>
 
-      <template>
-        <items-per-page :rowsPerPage.sync="filters.rowsPerPage" class="mr-2"></items-per-page>
-      </template>
+      <div>
+        <items-per-page :rowsPerPage="filters.rowsPerPage" class="mr-2"></items-per-page>
+      </div>
 
     </v-row>
 

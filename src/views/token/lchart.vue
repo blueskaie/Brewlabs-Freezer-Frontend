@@ -18,9 +18,9 @@
         color="#aaa">
           <img 
           src="@/assets/img/BF_fill.png" 
-          height="50px"
+          height="50"
           class="greyscale"
-          width="50px">
+          width="50">
         </v-progress-circular>
       </div>
 
@@ -38,9 +38,9 @@
         <v-menu offset-y open-on-hover transition="scale-transition" max-width="300px">
           <template v-slot:activator="{ on, attrs }">
             <v-icon
+              v-bind="attrs"
               @click.stop
               size="14"
-              v-bind="attrs"
               v-on="on"
               color="textFaint"
               class="ml-1"

@@ -4,7 +4,7 @@
       Is a uniswap token ranking high on the volume list?
     </div>
     <div class="mt-5 mb-5 d-flex align-center white pa-3 r-outlined ml-2 br-20 mr-2 background">
-      <c-input :value.sync="pair_address" placeholder="token address" class="heading--text">
+      <c-input :value="pair_address" placeholder="token address" class="heading--text">
       </c-input>
     </div>
 

@@ -8,8 +8,8 @@
       color="#aaa">
         <img 
         src="@/assets/img/BF_fill.png" 
-        height="40px"
-        width="40px"
+        height="40"
+        width="40"
         class="greyscale">
       </v-progress-circular>
     </div>
@@ -28,9 +28,9 @@
             </div>
             <img 
             src="@/assets/img/flags/close.svg" 
-            height="26px"
+            height="26"
             class="mr-2"
-            width="26px">
+            width="26">
             <span>
               Flagged
             </span>
@@ -41,9 +41,9 @@
             </div>
             <img 
             src="@/assets/img/flags/exclamation.svg" 
-            height="26px"
+            height="26"
             class="mr-2"
-            width="26px">
+            width="26">
             <span>
               Minor warning
             </span>
@@ -54,9 +54,9 @@
             </div>
             <img 
             src="@/assets/img/flags/verified.svg" 
-            height="26px"
+            height="26"
             class="mr-2"
-            width="26px">
+            width="26">
             <span>
               Verified
             </span>

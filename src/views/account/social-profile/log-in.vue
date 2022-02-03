@@ -10,7 +10,7 @@
 
       <!--
       <div class="mt-2 d-flex align-center pa-3 r-outlined br-20 white">
-        <c-input :value.sync="username" placeholder="Username..." class="heading--text">
+        <c-input :value="username" placeholder="Username..." class="heading--text">
         </c-input>
       </div>
       -->
@@ -58,7 +58,7 @@
       <template v-if="tab === 2">
 
         <div class="mt-2 d-flex align-center pa-3 br-20 inputcolor">
-          <c-input :value.sync="username" placeholder="Username...">
+          <c-input :value="username" placeholder="Username...">
           </c-input>
           
           <v-icon small v-if="username.length > 0" @click="username = ''" tabindex="-1">
@@ -67,7 +67,7 @@
 
         </div>
         <div class="mt-2 d-flex align-center pa-3 br-20 inputcolor">
-          <c-input :value.sync="password" placeholder="Password..." :type="textType">
+          <c-input :value="password" placeholder="Password..." :type="textType">
           </c-input>
           
           <v-icon small v-if="password.length > 0" @click="password = ''" tabindex="-1" class="mr-2">

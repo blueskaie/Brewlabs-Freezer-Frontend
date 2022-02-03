@@ -8,8 +8,8 @@
       color="#aaa">
         <img 
         src="@/assets/img/BF_fill.png" 
-        height="60px"
-        width="60px"
+        height="60"
+        width="60"
         class="greyscale">
       </v-progress-circular>
     </div>

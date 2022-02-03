@@ -41,25 +41,25 @@
         <v-btn icon height="100px" width="100px" @click="rating = 0">
           <img 
           src="@/assets/img/flags/verified.svg" 
-          height="80px"
+          height="80"
           :class="{'greyscale': rating !== 0}"
-          width="95px">
+          width="95">
         </v-btn>
         
         <v-btn icon height="100px" width="100px" @click="rating = 1">
           <img 
           src="@/assets/img/flags/exclamation.svg" 
-          height="80px"
+          height="80"
           :class="{'greyscale': rating !== 1}"
-          width="80px">
+          width="80">
         </v-btn>
 
         <v-btn icon height="100px" width="100px" @click="rating = 2">
           <img 
           src="@/assets/img/flags/close.svg" 
-          height="80px"
+          height="80"
           :class="{'greyscale': rating !== 2}"
-          width="80px">
+          width="80">
         </v-btn>
       </div>
 
@@ -83,7 +83,7 @@
       </div>
 
       <div class="d-flex align-center inputcolor pa-2 pb-0 r-outlined">
-        <c-textarea :value.sync="audit_text" placeholder="Token contract contains minting / proxies..." rows="5"></c-textarea>
+        <c-textarea :value="audit_text" placeholder="Token contract contains minting / proxies..." rows="5"></c-textarea>
       </div>
 
       <div class="mt-6">
@@ -93,7 +93,7 @@
         e.g. https://twitter.com/certik/sometweet
       </div>
       <div class="mt-2 d-flex align-center pa-3 br-20 inputcolor">
-        <c-input :value.sync="audit_link" placeholder="https://">
+        <c-input :value="audit_link" placeholder="https://">
         </c-input>
       </div>
       <div v-if="!linkIsValid" class="pink--text">

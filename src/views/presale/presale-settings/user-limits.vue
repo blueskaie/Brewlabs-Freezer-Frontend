@@ -6,7 +6,7 @@
     </div>
 
     <div class="d-flex align-center inputcolor pa-4 r-outlined">
-      <c-input :value.sync="maxSpendHuman" placeholder="0.0" @updateWhileFocussed="onMaxSpendAmountChange" class="pa-2 font-weight-bold">
+      <c-input :value="maxSpendHuman" placeholder="0.0" @updateWhileFocussed="onMaxSpendAmountChange" class="pa-2 font-weight-bold">
       </c-input>
 
       <div class="font-weight-bold">

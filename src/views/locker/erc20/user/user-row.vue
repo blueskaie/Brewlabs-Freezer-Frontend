@@ -118,10 +118,10 @@
         >
           <template v-slot:activator="{ attrs, on }">
             <v-btn
+              v-bind="attrs"
               icon
               small
               :color="sEthers.coinbase === item.owner ? 'primary' : 'textFaint'"
-              v-bind="attrs"
               v-on="on"
             >
 

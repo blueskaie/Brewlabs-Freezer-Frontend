@@ -7,8 +7,8 @@
         <div class="text-center">
           <img 
           src="@/assets/img/icons/token.svg" 
-          height="60px"
-          width="60px"
+          height="60"
+          width="60"
           class="greyscale">
         </div>
 
@@ -23,8 +23,8 @@
           <v-btn large block outlined @click="$root.$dialog.chainSwitcher.open()" class="title">
             <img 
             :src="$settings.CHAINS[$store.state.requiredNetwork].icon" 
-            height="24px"
-            width="24px"
+            height="24"
+            width="24"
             class="mr-3 br-20">
             {{ $settings.CHAIN_DISPLAY_NAME[$store.state.requiredNetwork] }}
             <v-icon small color="">mdi-chevron-down</v-icon>
@@ -84,12 +84,12 @@
             </div>
               
             <div class="mt-2 d-flex align-center pa-3 br-20 inputcolor">
-              <c-input :value.sync="tokenName" placeholder="Token Name">
+              <c-input :value="tokenName" placeholder="Token Name">
               </c-input>
             </div>
 
             <div class="mt-2 d-flex align-center pa-3 br-20 inputcolor">
-              <c-input :value.sync="tokenSymbol" placeholder="Token Symbol">
+              <c-input :value="tokenSymbol" placeholder="Token Symbol">
               </c-input>
             </div>
             
@@ -97,7 +97,7 @@
               Total supply (excluding decimals e.g. 100 tokens)
             </div>
             <div class="mt-2 d-flex align-center pa-3 br-20 inputcolor">
-              <c-input :value.sync="tokenTotalSuply" placeholder="Total Supply">
+              <c-input :value="tokenTotalSuply" placeholder="Total Supply">
               </c-input>
             </div>
 
@@ -105,7 +105,7 @@
               Decimals (18 reccomended)
             </div>
             <div class="d-flex align-center pa-3 br-20 inputcolor">
-              <c-input :value.sync="tokenDecimal" placeholder="Decimals">
+              <c-input :value="tokenDecimal" placeholder="Decimals">
               </c-input>
             </div>
 

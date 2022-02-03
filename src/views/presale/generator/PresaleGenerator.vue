@@ -30,8 +30,8 @@
               <div class="text-center">
                 <img 
                 src="@/assets/img/icons/rocket.svg" 
-                height="60px"
-                width="60px"
+                height="60"
+                width="60"
                 class="primary-pulse br-c">
               </div>
               <div class="d-flex align-center justify-center title font-weight-bold mb-2">
@@ -101,7 +101,7 @@
               <template v-if="true">
 
                 <div class="mt-2 d-flex align-center pa-3 r-outlined br-20 inputcolor">
-                  <c-input :value.sync="presaleTokenAddress" placeholder="Enter your token address...">
+                  <c-input :value="presaleTokenAddress" placeholder="Enter your token address...">
                   </c-input>
 
                   <v-progress-circular
@@ -209,7 +209,7 @@
                   </div>
 
                   <div class="d-flex align-center">
-                    <c-input :value.sync="amountHuman" placeholder="0.0" @updateWhileFocussed="onPresaleTokenAmountChange" class="pa-2 font-weight-bold">
+                    <c-input :value="amountHuman" placeholder="0.0" @updateWhileFocussed="onPresaleTokenAmountChange" class="pa-2 font-weight-bold">
 
                     </c-input>
 
@@ -250,7 +250,7 @@
                     </div>
 
                     <div class="d-flex align-center inputcolor pa-4 r-outlined">
-                      <c-input :value.sync="softcapHuman" placeholder="0.0" @updateWhileFocussed="onSoftcapAmountChange" class="pa-2 font-weight-bold">
+                      <c-input :value="softcapHuman" placeholder="0.0" @updateWhileFocussed="onSoftcapAmountChange" class="pa-2 font-weight-bold">
                       </c-input>
 
                       <div class="font-weight-bold">
@@ -264,7 +264,7 @@
                     </div>
 
                     <div class="d-flex align-center inputcolor pa-4 r-outlined">
-                      <c-input :value.sync="hardcapHuman" placeholder="0.0" @updateWhileFocussed="onHardcapAmountChange" class="pa-2 font-weight-bold">
+                      <c-input :value="hardcapHuman" placeholder="0.0" @updateWhileFocussed="onHardcapAmountChange" class="pa-2 font-weight-bold">
                       </c-input>
 
                       <div class="font-weight-bold">
@@ -496,7 +496,7 @@
                     </div>
 
                     <div class="d-flex align-center inputcolor pa-2 pr-4 r-outlined">
-                      <c-input :value.sync="maxSpendHuman" placeholder="0.0" @updateWhileFocussed="onMaxSpendAmountChange" class="pa-2">
+                      <c-input :value="maxSpendHuman" placeholder="0.0" @updateWhileFocussed="onMaxSpendAmountChange" class="pa-2">
                       </c-input>
 
                       <div class="font-weight-bold">
@@ -565,7 +565,7 @@
                   Start Date
                 </div>
 
-                <b-date :block.sync="startBlock"></b-date>
+                <b-date :block="startBlock"></b-date>
 
                 <div v-if="startBlock < oneWeekFromNowAsBlockNumber" class="pink--text">
                   Presale should ideally start 1 week from today to give you time to raise awareness
@@ -575,7 +575,7 @@
                   End Date
                 </div>
 
-                <b-date :block.sync="endBlock"></b-date>
+                <b-date :block="endBlock"></b-date>
 
                 <div>
                   Presale duration: {{ presaleDurationHuman }} / {{ presaleBlockDuration }} blocks
@@ -594,7 +594,7 @@
                 </div>
                 
                 <!-- REFERRALS -->
-                <template>
+                <div>
                   <div class="mt-10 title font-weight-bold text-center">
                     Do you have a valid referral address?
                   </div>
@@ -614,7 +614,7 @@
                         Enter the ethereum address of one of Unicrypts partners who referred you here.
                       </div>
                       <div class="mt-2 d-flex align-center pa-3 r-outlined br-8 inputcolor">
-                        <c-input :value.sync="referralAddress" placeholder="Referral address">
+                        <c-input :value="referralAddress" placeholder="Referral address">
                         </c-input>
 
                         <v-progress-circular
@@ -639,7 +639,7 @@
                       </div>
                     </div>
                   </v-slide-y-transition>
-                </template>
+                </div>
                 <!-- REFERRALS -->
 
                 <div class="mt-10 mb-2 title font-weight-bold text-center">
@@ -703,9 +703,9 @@
                   </div>
                   <img 
                   src="@/assets/img/flags/close.svg" 
-                  height="26px"
+                  height="26"
                   class="mr-2"
-                  width="26px">
+                  width="26">
                   <div>
                     <div class="caption">
                       You do not have enough {{ $store.state.nativeGasTokenSymbol }} in your wallet to perform this transaction.

@@ -18,8 +18,8 @@
           <v-btn large block outlined to="/chain?redirect=locker" class="title">
             <img 
             :src="$settings.CHAINS[$store.state.requiredNetwork].icon" 
-            height="24px"
-            width="24px"
+            height="24"
+            width="24"
             class="mr-3 br-20">
             {{ $settings.CHAIN_DISPLAY_NAME[$store.state.requiredNetwork] }}
             <v-icon small color="">mdi-chevron-down</v-icon>

@@ -26,7 +26,7 @@
       </div>
 
       <div class="d-flex align-center">
-        <c-input :value.sync="amountHuman" placeholder="0.0" @updateWhileFocussed="onHumanAmountChange" class="pa-2 title font-weight-bold">
+        <c-input :value="amountHuman" placeholder="0.0" @updateWhileFocussed="onHumanAmountChange" class="pa-2 title font-weight-bold">
 
         </c-input>
 

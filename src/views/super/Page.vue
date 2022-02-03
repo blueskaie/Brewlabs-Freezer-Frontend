@@ -4,7 +4,7 @@
     <v-card class="mb-2 br-20">
 
       <div v-if="false" class="mt-5 mb-5 d-flex align-center white pa-3 r-outlined ml-2 br-20 mr-2 background">
-        <c-input :value.sync="apiKey" placeholder="Key">
+        <c-input :value="apiKey" placeholder="Key">
         </c-input>
       </div>
 

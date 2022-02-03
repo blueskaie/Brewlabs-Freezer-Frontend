@@ -111,8 +111,8 @@
         <v-btn v-if="dextLink" text color="textFaint" rounded :href="dextLink" target="_blank">
           <img 
           src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xfB7B4564402E5500dB5bB6d63Ae671302777C75a/logo.png" 
-          height="18px"
-          width="18px"
+          height="18"
+          width="18"
           class="mr-1">
           Dext
           <v-icon x-small>mdi-arrow-top-right</v-icon>
@@ -144,9 +144,9 @@
               <div class="d-flex align-center mb-2">
                 <img 
                 src="@/assets/img/flags/exclamation.svg" 
-                height="26px"
+                height="26"
                 class="mr-2"
-                width="26px">
+                width="26">
                 No Locked Liquidity on Unicrypt
               </div>
               <div class="caption font-weight-bold">

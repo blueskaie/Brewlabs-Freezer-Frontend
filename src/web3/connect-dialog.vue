@@ -24,7 +24,7 @@
           <v-card v-if="sEthers.coinbase" outlined class="background blocks br-0 d-flex align-center pa-3">
             <img 
             src="@/assets/img/UNCL.svg"
-            width="40px"
+            width="40"
             class="greyscale">
             <div class="ml-3" style="flex: 1;">
               <div class="caption d-flex align-center white--text font-weight-medium">
@@ -75,7 +75,7 @@
             class="c-list border-b pa-4 d-flex align-center">
               <img 
               src="@/assets/img/metamask.svg" 
-              width="30px"
+              width="30"
               class="mr-3">
               <div class="font-weight-bold d-flex align-center">
                 Metamask
@@ -89,7 +89,7 @@
             class="c-list border-b pa-4 d-flex align-center">
               <img 
               src="@/assets/img/coinbase-wallet.svg" 
-              width="30px"
+              width="30"
               class="mr-3">
               <div class="font-weight-bold">
                 Coinbase Wallet
@@ -101,7 +101,7 @@
             class="c-list pa-4 d-flex align-center">
               <img 
               src="@/assets/img/wallet-connect.svg" 
-              width="30px"
+              width="30"
               class="mr-3">
               <div>
                 <div class="font-weight-bold">
@@ -122,7 +122,7 @@
             class="c-list border-b pa-4 d-flex align-center">
               <img 
               src="@/assets/img/metamask.svg" 
-              width="30px"
+              width="30"
               class="mr-3">
               <div>
                 <div class="font-weight-bold d-flex align-center">
@@ -140,7 +140,7 @@
             class="c-list pa-4 d-flex align-center">
               <img 
               src="@/assets/img/wallet-connect.svg" 
-              width="30px"
+              width="30"
               class="mr-3">
               <div>
                 <div class="font-weight-bold">
@@ -160,7 +160,7 @@
         <!-- HARDHAT -->
         <div v-if="$store.state.superUserMode"  class="v-card ma-2 pa-2 br-20 text-center">
           <div :class="['mt-1 mb-5 d-flex align-center pa-3 r-outlined br-20 mx-2', {'foreground': $vuetify.breakpoint.xs}, {'inputcolor': !$vuetify.breakpoint.xs}]">
-            <c-input :value.sync="impersonate" placeholder="Impersonate address..." class="">
+            <c-input :value="impersonate" placeholder="Impersonate address..." class="">
             </c-input>
 
             <v-icon v-if="impersonate === ''">

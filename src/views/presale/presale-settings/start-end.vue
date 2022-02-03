@@ -14,13 +14,13 @@
       Start Date
     </div>
 
-    <b-date :block.sync="startBlock"></b-date>
+    <b-date :block="startBlock"></b-date>
 
     <div class="mt-10 mb-2 title font-weight-bold text-center">
       End Date
     </div>
 
-    <b-date :block.sync="endBlock"></b-date>
+    <b-date :block="endBlock"></b-date>
 
     <div>
       Presale duration: {{ presaleDurationHuman }} / {{ presaleBlockDuration }} blocks
