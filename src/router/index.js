@@ -224,7 +224,7 @@ const routes = [
     component: Swap
   },
   {
-    path: "*",
+    path: "/:catchAll(.*)",
     component: ErrorPage
   }
 ]
