@@ -39,7 +39,7 @@
             Total supply
           </div>
         </div>
-        <tokens-row v-for="token of tokens" :key="token.address" :item="token"@click="$root.tokenPage.open(token.address, $store.state.requiredNetwork)">
+        <tokens-row v-for="token of tokens" :key="token.address" :item="token" @click="$root.tokenPage.open(token.address, $store.state.requiredNetwork)">
         </tokens-row>
 
         <div v-if="pageCount > 1" class="d-flex align-center justify-center background pa-2">

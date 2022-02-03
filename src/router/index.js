@@ -1,5 +1,4 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import ErrorPage from '@/views/404/Page.vue'
 import Tokens from '@/views/tokens/Page.vue'
 import Token from '@/views/token/Page.vue'
@@ -42,8 +41,6 @@ import TC_Farms from '@/views/terms-conditions/farms'
 import TC_General from '@/views/terms-conditions/general'
 import TC_ILO from '@/views/terms-conditions/ilos'
 import PrivacyPolicy from '@/views/terms-conditions/privacy-policy'
-
-Vue.use(VueRouter)
 
 const routes = [
   {
@@ -232,8 +229,8 @@ const routes = [
   }
 ]
 
-const router = new VueRouter({
-  mode: 'history',
+const router = createRouter({
+  history: createWebHistory(),
   base: process.env.BASE_URL,
   routes,
   scrollBehavior (to, from, savedPosition) {

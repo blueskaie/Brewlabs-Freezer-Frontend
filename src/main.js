@@ -1,4 +1,4 @@
-import Vue from 'vue'
+import Vue, { createApp } from 'vue'
 
 import App from './App.vue'
 import router from './router'
@@ -24,9 +24,15 @@ Vue.prototype.$axios = http
 Vue.prototype.$userAxios = userAxios
 Vue.prototype.$settings = SETTINGS
 
-new Vue({
-  router,
-  store,
-  vuetify,
-  render: h => h(App)
-}).$mount('#app')
+const app = createApp(App);
+
+app.use(router)
+app.use(store)
+app.use(vuetify)
+app.mount('#app')
+// new Vue({
+//   router,
+//   store,
+//   vuetify,
+//   render: h => h(App)
+// }).$mount('#app')

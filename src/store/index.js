@@ -1,16 +1,14 @@
 import Vue from 'vue'
-import Vuex from 'vuex'
+import { createStore } from 'vuex'
 import themes from '@/plugins/themes.js'
 import ConnectProvider from '@/web3/connect-provider'
 import SETTINGS from '@/store/settings'
-
-Vue.use(Vuex)
 
 // SETTINGS - CHANGE ALL
 const NETWORK = 'BSC_MAINNET' // Hardcoded (wont change) // options: Ganache, Mainnet, Kovan, BSC_MAINNET, XDAI
 const EXCHANGE = 'Pancakeswap V2' // Uniswap, Pancakeswap, Honeyswap
 
-export const store = new Vuex.Store({
+export const store = createStore({
   state: {
     theme: 'theme1',
     blockNumber: -1,
