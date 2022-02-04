@@ -1,4 +1,4 @@
-import Vue, { createApp } from 'vue'
+import { createApp } from 'vue'
 
 import App from './App.vue'
 import router from './router'
@@ -17,15 +17,13 @@ import '@mdi/font/css/materialdesignicons.css'
 import '@/assets/css/main.scss'
 import './registerServiceWorker'
 
-Vue.use(VueClipboard)
-
-Vue.config.productionTip = false
-Vue.prototype.$axios = http
-Vue.prototype.$userAxios = userAxios
-Vue.prototype.$settings = SETTINGS
-
 const app = createApp(App);
 
+app.config.globalProperties.$axios = http
+app.config.globalProperties.$userAxios = userAxios
+app.config.globalProperties.$settings = SETTINGS
+
+app.use(VueClipboard)
 app.use(router)
 app.use(store)
 app.use(vuetify)

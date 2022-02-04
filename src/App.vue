@@ -432,6 +432,7 @@ export default {
 
   computed: {
     sEthers () {
+      console.log("asdfafd", this)
       return this.$store.state.ethers
     },
     wrongNetwork () {
