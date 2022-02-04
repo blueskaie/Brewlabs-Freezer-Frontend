@@ -91,49 +91,96 @@
     <v-expand-transition>
       <div v-if="expandInfo" class="background">
 
-        <div class="d-flex justify-center pt-2">
-          <div class="d-flex align-center foreground textFaint--text font-weight-medium br-20 px-3">
-            <coin-icon :address="item.token0.address" :url="item.token0.icon_url" :network="cNetwork"  :size="24" class="mr-1"></coin-icon>
+        <div class="d-flex align-center pt-2">
+          <div class="flex" style="height: 2px"></div>
+          <coin-icon :address="item.token0.address" :url="item.token0.icon_url" :network="cNetwork"  :size="40" style="border-radius: 500px"></coin-icon>
+          <div class="outline flex" style="height: 2px"></div>
+          <img 
+          v-if="true"
+          src="@/assets/img/BF_fill.png"
+          height="60px"
+          width="60px"
+          class="mx-1">
+          <div class="outline flex" style="height: 2px"></div>
+          <coin-icon :address="item.token1.address" :url="item.token1.icon_url" :network="cNetwork"  :size="40" style="border-radius: 500px"></coin-icon>
+          <div class="flex" style="height: 2px"></div>
+        </div>
+
+        <div class="d-flex align-center font-weight-bold">
+          <div class="flex text-center" style="flex: 110 1 0%">
+            <div class="caption textFaint--text pt-1">{{ token0Symbol }}</div>
             {{ reserve0Human }}
           </div>
-          <div class="d-flex align-center textFaint--text foreground font-weight-medium br-20 px-3">
-            <coin-icon :address="item.token1.address" :url="item.token1.icon_url" :network="cNetwork"  :size="24" class="mr-1"></coin-icon>
+          <div>
+            <button
+              type="button"
+              class="v-btn v-btn--icon v-btn--round theme--light v-size--default textFaint--text"
+            >
+              <span class="v-btn__content"
+                ><i
+                  aria-hidden="true"
+                  class="v-icon notranslate mdi mdi-refresh theme--light"
+                  style="font-size: 16px"
+                ></i
+              ></span>
+            </button>
+          </div>
+          <div class="flex text-center" style="flex: 110 1 0%">
+            <div class="caption textFaint--text pt-1">{{ token1Symbol }}</div>
             {{ reserve1Human }}
           </div>
-          <v-btn v-if="!refreshReservesLoading" @click.stop="getReserves" icon color="textFaint">
-            <v-icon small>mdi-refresh</v-icon>
-          </v-btn>
-          <div v-else style="height: 36px; width: 36px;" class="d-flex align-center justify-center">
-            <v-progress-circular
-            indeterminate
-            size="14"
-            width="2"
-            color="primary">
-            </v-progress-circular>
-          </div>
         </div>
-        <div class="caption textFaint--text font-weight-medium font-italic text-center">
-          {{ cExchange }} index: {{ item.uniswap_index }}
-        </div>
-        <div class="text-center mt-1">
-          <v-btn color="textFaint" rounded text :href="`${$settings.AMMS[this.cExchange].ammTokenLink}${item.address}`" target="_blank">
-            Pair
-            <v-icon x-small>mdi-arrow-top-right</v-icon>
-          </v-btn>
-          <v-btn v-if="dextLink" text color="textFaint" rounded :href="dextLink" target="_blank">
-            <img 
-            src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xfB7B4564402E5500dB5bB6d63Ae671302777C75a/logo.png" 
-            height="14px"
-            width="14px"
-            class="mr-1">
-            Dext
-            <v-icon x-small>mdi-arrow-top-right</v-icon>
-          </v-btn>
-          <v-btn rounded text color="textFaint" @click="$root.ammLinkTwo(`/pair/${item.address}`, cExchange)">
-            View lock page
+
+        <div class="d-flex align-center justify-center text-center">
+          <v-btn rounded text color="textFaint" @click="$root.ammLinkTwo(`/pair/${item.address}`, cExchange)" style="border: 1px solid #a9a9a92e">
+            VIEW LOCK
           </v-btn>
         </div>
 
+        <div class="pt-3">
+          <div class="mx-5 font-weight-bold">Pair</div>
+          <div class="outline flex" style="height: 1px;"></div>
+           <div class="text-center px-5 py-1">
+            <div class="d-flex align-center">
+              Link
+              <v-spacer></v-spacer>
+              <div class="text-center mt-1">
+                <v-btn color="textFaint" rounded text :href="`${$settings.AMMS[this.cExchange].ammTokenLink}${item.address}`" target="_blank">
+                  <img 
+                  src="https://cryptologos.cc/logos/pancakeswap-cake-logo.svg?v=010" 
+                  height="20px"
+                  width="20px">
+                  <v-icon x-small>mdi-arrow-top-right</v-icon>
+                </v-btn>
+                <v-btn v-if="dextLink" text color="textFaint" rounded :href="dextLink" target="_blank">
+                  <img 
+                  src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xfB7B4564402E5500dB5bB6d63Ae671302777C75a/logo.png" 
+                  height="20px"
+                  width="20px">
+                  <v-icon x-small>mdi-arrow-top-right</v-icon>
+                </v-btn>
+              </div>
+            </div>
+          </div>
+          <div class="outline flex" style="height: 1px;"></div>
+          <div class="text-center px-5 py-1">
+            <div class="d-flex align-center">
+              Contract
+              <v-spacer></v-spacer>
+              <copy-address :address="item.address" color="textFaint"></copy-address>
+            </div>
+          </div>
+          <div class="outline flex" style="height: 1px;"></div>
+
+          <div class="text-center px-5 py-1">
+            <div class="d-flex align-center">
+              Pancakeswap V2 index
+              <v-spacer></v-spacer>
+              {{ item.uniswap_index }}
+            </div>
+          </div>
+          <div class="outline flex" style="height: 1px;"></div>
+        </div>
       </div>
     </v-expand-transition>
 
