@@ -10,7 +10,7 @@
         <div class="d-flex align-center">
           Your Vested
           <v-btn text @click.stop="openTokenPopup" class="ml-2 pa-0 font-weight-bold" style="min-width: 10px;">
-            <span class="text-truncate" :style="$vuetify.breakpoint.xs ? 'max-width: 10ch;' : 'max-width: 20ch;'">
+            <span class="text-truncate" :style="$vuetify.display.xs ? 'max-width: 10ch;' : 'max-width: 20ch;'">
               {{ tokenHydrated.symbol }}
             </span>
             <v-icon small color="textFaint">mdi-chevron-up</v-icon>

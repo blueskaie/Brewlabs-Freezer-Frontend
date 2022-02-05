@@ -25,12 +25,7 @@ app.config.globalProperties.$settings = SETTINGS
 
 app.use(VueClipboard)
 app.use(router)
-app.use(store)
 app.use(vuetify)
+app.use(store)
+
 app.mount('#app')
-// new Vue({
-//   router,
-//   store,
-//   vuetify,
-//   render: h => h(App)
-// }).$mount('#app')

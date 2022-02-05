@@ -1,8 +1,8 @@
 <template>
-  <v-container style="max-width: 600px;" :class="[{'pa-0 foreground mobile-page': $vuetify.breakpoint.xs}]">
+  <v-container style="max-width: 600px;" :class="[{'pa-0 foreground mobile-page': $vuetify.display.xs}]">
 
     <v-slide-x-transition appear>
-      <v-card :class="['br-20', {'pa-4': $vuetify.breakpoint.xs}, {'pa-6': !$vuetify.breakpoint.xs}]">
+      <v-card :class="['br-20', {'pa-4': $vuetify.display.xs}, {'pa-6': !$vuetify.display.xs}]">
 
         <div class="text-center">
           <img 

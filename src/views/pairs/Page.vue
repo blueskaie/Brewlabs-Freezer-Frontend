@@ -1,7 +1,7 @@
 <template>
-  <v-container style="max-width: 600px;" :class="[{'pa-0 foreground': $vuetify.breakpoint.xs}]">
+  <v-container style="max-width: 600px;" :class="[{'pa-0 foreground': $vuetify.display.xs}]">
 
-    <div :class="['mb-16', {'': $vuetify.breakpoint.xs}, {'v-card br-20': !$vuetify.breakpoint.xs}]">
+    <div :class="['mb-16', {'': $vuetify.display.xs}, {'v-card br-20': !$vuetify.display.xs}]">
       
       <!-- ADVERT 740 x 140 px -->
       <!--

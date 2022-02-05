@@ -191,7 +191,7 @@ export default {
 
   computed: {
     imageSize () {
-      return this.$vuetify.breakpoint.xs ? '50px' : '100px'
+      return this.$vuetify.display.xs ? '50px' : '100px'
     }
   },
 

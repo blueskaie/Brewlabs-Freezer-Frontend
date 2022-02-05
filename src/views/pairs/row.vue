@@ -10,14 +10,14 @@
 
         <v-btn text rounded @click.stop="openTokenPage(item.token0.address)" class="title pa-0" style="min-width: 10px;">
           <coin-icon :address="item.token0.address" :url="item.token0.icon_url" :network="cNetwork" :size="20" class="mr-1"></coin-icon>
-          <span class="text-truncate" :style="$vuetify.breakpoint.xs ? 'max-width: 9ch;' : 'max-width: 20ch;'">
+          <span class="text-truncate" :style="$vuetify.display.xs ? 'max-width: 9ch;' : 'max-width: 20ch;'">
             {{ token0Symbol }}
           </span>
           <v-icon x-small color="textFaint">mdi-chevron-up</v-icon>
         </v-btn>
         <v-btn text rounded @click.stop="openTokenPage(item.token1.address)" class="ml-2 title pa-0" style="min-width: 10px;">
           <coin-icon :address="item.token1.address" :url="item.token1.icon_url" :network="cNetwork"  :size="20" class="mr-1"></coin-icon>
-          <span class="text-truncate" :style="$vuetify.breakpoint.xs ? 'max-width: 9ch;' : 'max-width: 20ch;'">
+          <span class="text-truncate" :style="$vuetify.display.xs ? 'max-width: 9ch;' : 'max-width: 20ch;'">
             {{ token1Symbol }}
           </span>
           <v-icon x-small color="textFaint">mdi-chevron-up</v-icon>

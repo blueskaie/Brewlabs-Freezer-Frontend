@@ -1,7 +1,7 @@
 <template>
-  <v-container :style="`max-width: ${$vuetify.breakpoint.xs ? '600px': '1100px'};`" :class="[{'pa-0 foreground mobile-page': $vuetify.breakpoint.xs}]">
+  <v-container :style="`max-width: ${$vuetify.display.xs ? '600px': '1100px'};`" :class="[{'pa-0 foreground mobile-page': $vuetify.display.xs}]">
 
-    <template v-if="$vuetify.breakpoint.mdAndUp">
+    <template v-if="$vuetify.display.mdAndUp">
       <div class="v-card br-20 pa-4 mb-3">
         <div class="title primary--text text-center font-weight-bold">
           ${{ tvalHumanFormat(tvalLocked) }} TVL
@@ -61,7 +61,7 @@
           </div>
 
           <v-slide-x-transition appear>
-            <div :class="['mb-16', {'pa-4': $vuetify.breakpoint.xs}, {'v-card br-20': !$vuetify.breakpoint.xs}]">
+            <div :class="['mb-16', {'pa-4': $vuetify.display.xs}, {'v-card br-20': !$vuetify.display.xs}]">
               
               <template v-if="presalesLoading">
                 <div class="text-center pa-8">
@@ -142,7 +142,7 @@
 
           <services-card class="v-card mb-4 br-20"></services-card>
 
-          <div :class="['mb-16', {'pa-4': $vuetify.breakpoint.xs}, {'v-card br-20': !$vuetify.breakpoint.xs}]">
+          <div :class="['mb-16', {'pa-4': $vuetify.display.xs}, {'v-card br-20': !$vuetify.display.xs}]">
 
             <div class="pa-4 d-flex align-center mb-1 mb-6 background">
               <v-icon color="text" size="22" class="mr-2">mdi-lock-outline</v-icon>

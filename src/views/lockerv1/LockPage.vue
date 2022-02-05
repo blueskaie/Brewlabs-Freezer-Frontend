@@ -1,5 +1,5 @@
 <template>
-  <v-card :class="['br-20', {'pa-4': $vuetify.breakpoint.xs}, {'pa-8': !$vuetify.breakpoint.xs}]">
+  <v-card :class="['br-20', {'pa-4': $vuetify.display.xs}, {'pa-8': !$vuetify.display.xs}]">
 
     <v-btn v-if="stage > 0" text @click="stage > 0 ? stage-- : ''" class="mb-4 pa-0">
       <v-icon>mdi-arrow-left</v-icon>

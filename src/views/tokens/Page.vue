@@ -1,7 +1,7 @@
 <template>
-  <v-container style="max-width: 600px;" :class="[{'pa-0': $vuetify.breakpoint.xs}]">
+  <v-container style="max-width: 600px;" :class="[{'pa-0': $vuetify.display.xs}]">
 
-    <div :class="['mb-16', {'foreground': $vuetify.breakpoint.xs}, {'v-card br-20': !$vuetify.breakpoint.xs}]">
+    <div :class="['mb-16', {'foreground': $vuetify.display.xs}, {'v-card br-20': !$vuetify.display.xs}]">
 
       <!-- ADVERT 740 x 140 px -->
       <!--
@@ -31,7 +31,7 @@
 
         <div>
 
-          <div :class="['d-flex border-b foreground mb-2', {'mt-2 border-t': $vuetify.breakpoint.xs}]" style="overflow: hidden;">
+          <div :class="['d-flex border-b foreground mb-2', {'mt-2 border-t': $vuetify.display.xs}]" style="overflow: hidden;">
             <div :class="['d-flex align-center flex pa-3 c-list top-tab', {'background': tab === 0}]" @click="tab = 0">
               <v-icon class="mr-1">mdi-magnify</v-icon>
               All tokens

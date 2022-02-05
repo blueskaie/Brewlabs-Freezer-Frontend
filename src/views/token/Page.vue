@@ -1,7 +1,7 @@
 <template>
-  <v-container style="max-width: 600px; overflow: hidden;" :class="[{'pa-0': $vuetify.breakpoint.xs}]">
+  <v-container style="max-width: 600px; overflow: hidden;" :class="[{'pa-0': $vuetify.display.xs}]">
 
-    <div :class="['mb-16', {'': $vuetify.breakpoint.xs}, {'': !$vuetify.breakpoint.xs}]">
+    <div :class="['mb-16', {'': $vuetify.display.xs}, {'': !$vuetify.display.xs}]">
 
       <div v-if="firstLoad" class="text-center">
         <v-progress-circular
@@ -20,7 +20,7 @@
       <v-scroll-x-transition mode="out-in">
         <div v-if="!firstLoad">
 
-          <div :class="[{'v-card br-20 ma-2': $vuetify.breakpoint.xs}, {'v-card br-20': !$vuetify.breakpoint.xs}]">
+          <div :class="[{'v-card br-20 ma-2': $vuetify.display.xs}, {'v-card br-20': !$vuetify.display.xs}]">
             <div class="text-center">
               <div class="d-flex align-center border-b pa-3">
                 <v-btn icon :to="`${$store.state.ammPrefix}/tokens`" color="textFaint">
@@ -138,7 +138,7 @@
             </v-btn>
           </div>
 
-          <div :class="[{'v-card br-20 ma-2': $vuetify.breakpoint.xs}, {'mt-2 v-card br-20': !$vuetify.breakpoint.xs}]">
+          <div :class="[{'v-card br-20 ma-2': $vuetify.display.xs}, {'mt-2 v-card br-20': !$vuetify.display.xs}]">
             <global-token :tokenHydrated="tokenHydrated"></global-token>
           </div>
 
@@ -165,7 +165,7 @@
             </div>
           </div>
           <!-- NOT LOCKED -->
-          <div v-else :class="['pa-4 mt-2', {'v-card br-20 ma-2': $vuetify.breakpoint.xs}, {'v-card br-20': !$vuetify.breakpoint.xs}]">
+          <div v-else :class="['pa-4 mt-2', {'v-card br-20 ma-2': $vuetify.display.xs}, {'v-card br-20': !$vuetify.display.xs}]">
             <div class="text-center">
               <img 
               src="@/assets/img/flags/exclamation.svg" 
@@ -181,7 +181,7 @@
             </div>
           </div>
 
-          <div :class="['mt-4', {'v-card br-20 ma-2': $vuetify.breakpoint.xs}, {'v-card br-20': !$vuetify.breakpoint.xs}]">
+          <div :class="['mt-4', {'v-card br-20 ma-2': $vuetify.display.xs}, {'v-card br-20': !$vuetify.display.xs}]">
             <div class="d-flex justify-center py-1 border-b">
               <v-btn text rounded x-large @click="tab = 0" :color="tab === 0 ? 'primary' : 'textFaint'">
                 Pairs

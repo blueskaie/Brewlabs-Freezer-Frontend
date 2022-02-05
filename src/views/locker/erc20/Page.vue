@@ -1,7 +1,7 @@
 <template>
-  <v-container style="max-width: 600px;" :class="[{'pa-0 foreground mobile-page': $vuetify.breakpoint.xs}]">
+  <v-container style="max-width: 600px;" :class="[{'pa-0 foreground mobile-page': $vuetify.display.xs}]">
     <v-slide-x-transition appear>
-      <div :class="['mb-16', {'pa-4': $vuetify.breakpoint.xs}, {'v-card br-20 pa-6': !$vuetify.breakpoint.xs}]">
+      <div :class="['mb-16', {'pa-4': $vuetify.display.xs}, {'v-card br-20 pa-6': !$vuetify.display.xs}]">
         
         <div class="text-center">
           <img 
@@ -50,7 +50,7 @@
 
         <template v-else>
 
-          <div :class="['mt-1 mb-2 d-flex align-center pa-3 r-outlined br-20 mx-2', {'foreground': $vuetify.breakpoint.xs}, {'inputcolor': !$vuetify.breakpoint.xs}]">
+          <div :class="['mt-1 mb-2 d-flex align-center pa-3 r-outlined br-20 mx-2', {'foreground': $vuetify.display.xs}, {'inputcolor': !$vuetify.display.xs}]">
             <img 
             :src="$settings.CHAINS[$store.state.requiredNetwork].icon" 
             height="20"
@@ -201,7 +201,7 @@
                 Error: Total Lock amount is Zero
               </div>
 
-              <div v-if="locksContainSendToAnotherUser" :class="{'pa-4': $vuetify.breakpoint.xs}">
+              <div v-if="locksContainSendToAnotherUser" :class="{'pa-4': $vuetify.display.xs}">
                 <div class="my-2 d-flex align-center font-weight-medium midground pa-4 br-8" style="position: relative; overflow: hidden;">
                   <div class="orange" style="position: absolute; left: 0px; top: 0px; bottom: 0px; right: 0px;opacity: 0.2;">
                   </div>
@@ -252,7 +252,7 @@
               </v-row>
             </div>
 
-            <div v-show="tokenHydrated.address && sEthers.coinbase && tab === 1" :class="[{'v-card br-20 mt-4': $vuetify.breakpoint.xs}, {'v-card br-20 mt-4': !$vuetify.breakpoint.xs}]">
+            <div v-show="tokenHydrated.address && sEthers.coinbase && tab === 1" :class="[{'v-card br-20 mt-4': $vuetify.display.xs}, {'v-card br-20 mt-4': !$vuetify.display.xs}]">
               <global-token :tokenHydrated="tokenHydrated"></global-token>
             </div>
 

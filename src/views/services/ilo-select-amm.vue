@@ -2,7 +2,7 @@
   <v-container style="max-width: 600px;">
 
     <v-slide-x-transition appear>
-      <div :class="['mb-16 pa-4', {'foreground v-card br-20': $vuetify.breakpoint.xs}, {'v-card br-20 foreground': !$vuetify.breakpoint.xs}]">
+      <div :class="['mb-16 pa-4', {'foreground v-card br-20': $vuetify.display.xs}, {'v-card br-20 foreground': !$vuetify.display.xs}]">
         
         <div class="text-center">
           <img 

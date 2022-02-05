@@ -2,7 +2,7 @@
   <v-container style="max-width: 600px;">
     
     <v-slide-y-transition appear>
-    <div :class="['mb-16', {'': $vuetify.breakpoint.xs}, {'v-card br-20 foreground': !$vuetify.breakpoint.xs}]">
+    <div :class="['mb-16', {'': $vuetify.display.xs}, {'v-card br-20 foreground': !$vuetify.display.xs}]">
       
       <div class="py-6 title text-center textFaint--text">
         Select an exchange

@@ -20,13 +20,13 @@
     "register-service-worker": "^1.7.1",
     "roboto-fontface": "*",
     "trading-vue-js": "^1.0.2",
-    "vue": "^3.0.0", 
+    "vue": "^3.0.0",
     "vue-chartjs": "^3.5.1",
     "vue-clipboard2": "^0.3.1",
     "vue-disqus": "^4.0.1",
-    "vue-router": "^4.0.0-0",
+    "vue-router": "^4.0.12",
     "vuetify": "^3.0.0-alpha.0",
-    "vuex": "^4.0.0-0",
+    "vuex": "^4.0.2",
     "walletlink": "^2.1.3"
   },
   "devDependencies": {
@@ -36,6 +36,7 @@
     "@vue/cli-plugin-router": "^4.5.15",
     "@vue/cli-plugin-vuex": "^4.5.15",
     "@vue/cli-service": "^4.5.13",
+    "@vue/compiler-sfc": "^3.0.0",
     "@vue/eslint-config-standard": "^5.1.2",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
@@ -46,7 +47,6 @@
     "eslint-plugin-vue": "^6.2.2",
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.2",
-    "vue-cli-plugin-vuetify": "^2.0.8",
-    "@vue/compiler-sfc": "^3.0.0" 
+    "vue-cli-plugin-vuetify": "^2.0.8"
   }
 }

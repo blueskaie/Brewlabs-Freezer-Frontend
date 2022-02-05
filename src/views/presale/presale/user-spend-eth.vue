@@ -84,7 +84,7 @@
         </div>
       </div>
 
-      <div v-if="showWarning" :class="{'pa-4': $vuetify.breakpoint.xs}">
+      <div v-if="showWarning" :class="{'pa-4': $vuetify.display.xs}">
         <div class="mb-2 d-flex align-center font-weight-medium midground pa-4 br-20" style="position: relative; overflow: hidden;">
           <div class="orange" style="position: absolute; left: 0px; top: 0px; bottom: 0px; right: 0px;opacity: 0.2;">
           </div>

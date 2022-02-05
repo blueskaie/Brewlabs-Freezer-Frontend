@@ -1,7 +1,7 @@
 <template>
   <v-container style="max-width: 600px;">
 
-    <v-card :class="['br-20 mb-16', {'pa-4': $vuetify.breakpoint.xs}, {'pa-6': !$vuetify.breakpoint.xs}]">
+    <v-card :class="['br-20 mb-16', {'pa-4': $vuetify.display.xs}, {'pa-6': !$vuetify.display.xs}]">
       
       <div class="d-flex align-center">
         <v-btn icon :to="`${$store.state.ammPrefix}/pairs`" color="text">

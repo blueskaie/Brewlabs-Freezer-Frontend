@@ -1,5 +1,4 @@
-// import Vue from 'vue'
-
+import { createApp } from 'vue'
 // UI COMPONENTS
 import ExpansionPanel from "@/components/ui/expansion-panel";
 import CInput from "@/components/ui/input";
@@ -9,27 +8,15 @@ import CPagination from "@/components/ui/pagination/pagination";
 import CopyAddress from "@/components/ui/copy-address";
 import ENMT from "@/components/ui/enmt";
 
-// UI COMPONENTS
-// Vue.component('expansion-panel', ExpansionPanel)
-// Vue.component('c-input', CInput)
-// Vue.component('c-textarea', CTextArea)
-// Vue.component('coin-icon', CoinIcon)
-// Vue.component('c-pagination', CPagination)
-// Vue.component('copy-address', CopyAddress)
-// Vue.component('enmt-badge', ENMT)
+const global_component = createApp({})
 
-export default {
-  install: (app, options) => {
-    [
-      ExpansionPanel,
-      CInput,
-      CTextArea,
-      CoinIcon,
-      CPagination,
-      CopyAddress,
-      ENMT,
-    ].forEach((Component) => {
-      app.component(Component.name, Component);
-    });
-  },
-};
+// UI COMPONENTS
+global_component.component('expansion-panel', ExpansionPanel)
+global_component.component('c-input', CInput)
+global_component.component('c-textarea', CTextArea)
+global_component.component('coin-icon', CoinIcon)
+global_component.component('c-pagination', CPagination)
+global_component.component('copy-address', CopyAddress)
+global_component.component('enmt-badge', ENMT)
+
+global_component.mount("#app")

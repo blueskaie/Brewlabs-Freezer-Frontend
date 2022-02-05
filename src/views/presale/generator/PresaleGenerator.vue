@@ -1,9 +1,9 @@
 <template>
-  <v-container :style="`max-width: ${$vuetify.breakpoint.xs ? '600px': '1100px'};`" :class="[{'pa-0 foreground mobile-page pb-16': $vuetify.breakpoint.xs}]">
+  <v-container :style="`max-width: ${$vuetify.display.xs ? '600px': '1100px'};`" :class="[{'pa-0 foreground mobile-page pb-16': $vuetify.display.xs}]">
     <v-row dense class="ma-0">
 
       <v-col cols="12" md="6">
-        <v-card :class="['br-20', {'pa-4': $vuetify.breakpoint.xs}, {'pa-8': !$vuetify.breakpoint.xs}]">
+        <v-card :class="['br-20', {'pa-4': $vuetify.display.xs}, {'pa-8': !$vuetify.display.xs}]">
 
           <div class="d-flex align-center">
             <v-btn icon :to="`${$store.state.ammPrefix}/ilos`" color="textFaint">
@@ -84,7 +84,7 @@
             Create your presale
           </div>
 
-          <div :class="[{'pa-4': $vuetify.breakpoint.xs}, {'pa-8': !$vuetify.breakpoint.xs}]">
+          <div :class="[{'pa-4': $vuetify.display.xs}, {'pa-8': !$vuetify.display.xs}]">
 
             <v-card v-if="!sEthers.coinbase" @click="connectWallet" class="pa-4 primary white--text align-center d-flex c-list br-20">
               <v-icon size="60" color="white">mdi-ethereum</v-icon>

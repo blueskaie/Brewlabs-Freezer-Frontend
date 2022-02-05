@@ -1,7 +1,7 @@
 <template>
   <v-container style="max-width: 600px;">
 
-    <v-card :class="['br-20 mb-16', {'pa-2': $vuetify.breakpoint.xs}, {'pa-4': !$vuetify.breakpoint.xs}]">
+    <v-card :class="['br-20 mb-16', {'pa-2': $vuetify.display.xs}, {'pa-4': !$vuetify.display.xs}]">
 
       <v-icon v-if="true" size="100" style="color: var(--v-background-base)!important; position: absolute; right: -0px; top: -0px;">mdi-settings</v-icon>
       

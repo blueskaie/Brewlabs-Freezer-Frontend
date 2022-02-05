@@ -1,11 +1,11 @@
 <template>
-  <v-container :style="`max-width: ${$vuetify.breakpoint.xs ? '600px': '1100px'};`" :class="[{'pa-0 foreground mobile-page pb-16': $vuetify.breakpoint.xs}]">
+  <v-container :style="`max-width: ${$vuetify.display.xs ? '600px': '1100px'};`" :class="[{'pa-0 foreground mobile-page pb-16': $vuetify.display.xs}]">
 
     <v-row dense class="ma-0">
 
       <v-col cols="12" md="6">
 
-        <div v-if="showWarning" :class="{'pa-2': $vuetify.breakpoint.xs}">
+        <div v-if="showWarning" :class="{'pa-2': $vuetify.display.xs}">
           <div class="mb-2 d-flex v-card align-center font-weight-medium pa-4 br-20">
             <div>
               <div class="d-flex align-center mb-2 orange--text">
@@ -196,7 +196,7 @@
 
       <v-col cols="12" md="6">
 
-        <div :class="['mb-16', {'pa-4': $vuetify.breakpoint.xs}, {'v-card pa-8 br-20': !$vuetify.breakpoint.xs}]">
+        <div :class="['mb-16', {'pa-4': $vuetify.display.xs}, {'v-card pa-8 br-20': !$vuetify.display.xs}]">
 
           <div v-if="firstLoad" class="text-center" style="height: 80vh;">
             <v-progress-circular
@@ -225,7 +225,7 @@
             </div>
             <div v-else-if="!firstLoad && !presaleNotFound">
 
-              <div :class="{'pa-2': $vuetify.breakpoint.xs}">
+              <div :class="{'pa-2': $vuetify.display.xs}">
                 <v-card outlined :class="['br-20 pa-4 mb-2 c-list']" href="https://t.me/Unicrypt_Presales" target="_blank">
                   <div class="d-flex align-center">
                     <v-icon size="60">mdi-telegram</v-icon>

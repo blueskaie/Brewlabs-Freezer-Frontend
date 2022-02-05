@@ -1,10 +1,10 @@
 <template>
   <div outlined
   :class="['c-list', 
-  {'pa-4 border-b br-0 foreground': mode === 0 && $vuetify.breakpoint.xs}, 
-  {'pa-4 foreground r-outlined br-0': mode === 1 && $vuetify.breakpoint.xs},
-  {'pa-4 border-b': mode === 0 && !$vuetify.breakpoint.xs}, 
-  {'border-b pa-4': mode === 1 && !$vuetify.breakpoint.xs}]" 
+  {'pa-4 border-b br-0 foreground': mode === 0 && $vuetify.display.xs}, 
+  {'pa-4 foreground r-outlined br-0': mode === 1 && $vuetify.display.xs},
+  {'pa-4 border-b': mode === 0 && !$vuetify.display.xs}, 
+  {'border-b pa-4': mode === 1 && !$vuetify.display.xs}]" 
   @click="goToTokenPage" style="position: relative;">
 
     <v-icon v-if="item.tval_locked" size="80" class="watermark" style="position: absolute; left: -30px; top: 20px;">mdi-lock-outline</v-icon>
@@ -78,7 +78,7 @@
         <div class="d-flex align-center">
           <coin-icon :address="item.address" :url="item.icon_url" class="mr-2" :size="22"></coin-icon>
           <v-btn text @click.stop="openTokenPage" class="title pa-0 font-weight-bold" style="min-width: 10px;">
-            <span class="text-truncate" :style="$vuetify.breakpoint.xs ? 'max-width: 10ch;' : 'max-width: 20ch;'">
+            <span class="text-truncate" :style="$vuetify.display.xs ? 'max-width: 10ch;' : 'max-width: 20ch;'">
               {{ item.symbol }}
             </span>
             <v-icon small color="textFaint">mdi-chevron-up</v-icon>

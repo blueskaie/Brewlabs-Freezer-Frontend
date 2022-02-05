@@ -129,7 +129,7 @@
                   In-Wallet Browser
                   <v-icon small color="text" class="ml-1">mdi-star-outline</v-icon>
                 </div>
-                <div v-if="$vuetify.breakpoint.smAndDown" class="caption textFaint--text">
+                <div v-if="$vuetify.display.smAndDown" class="caption textFaint--text">
                   Use this option if you are using an in-wallet browser such as Metamask browser, or TrustWallet browser.
                 </div>
               </div>
@@ -159,7 +159,7 @@
 
         <!-- HARDHAT -->
         <div v-if="$store.state.superUserMode"  class="v-card ma-2 pa-2 br-20 text-center">
-          <div :class="['mt-1 mb-5 d-flex align-center pa-3 r-outlined br-20 mx-2', {'foreground': $vuetify.breakpoint.xs}, {'inputcolor': !$vuetify.breakpoint.xs}]">
+          <div :class="['mt-1 mb-5 d-flex align-center pa-3 r-outlined br-20 mx-2', {'foreground': $vuetify.display.xs}, {'inputcolor': !$vuetify.display.xs}]">
             <c-input :value="impersonate" placeholder="Impersonate address..." class="">
             </c-input>
 
@@ -264,7 +264,7 @@ export default {
       this.ethBalance = ethBalance
     },
     open () {
-      this.tab = this.$vuetify.breakpoint.xs ? 1 : 0
+      this.tab = this.$vuetify.display.xs ? 1 : 0
       this.dialog = true
       return new Promise((resolve, reject) => {
         this.resolve = resolve

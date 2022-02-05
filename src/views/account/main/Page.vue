@@ -1,5 +1,5 @@
 <template>
-  <v-container style="max-width: 600px;" :class="[{'pa-0 mobile-page': $vuetify.breakpoint.xs}]">
+  <v-container style="max-width: 600px;" :class="[{'pa-0 mobile-page': $vuetify.display.xs}]">
     
     <v-slide-y-transition appear>
       <div :class="['mb-16']">
@@ -19,7 +19,7 @@
           </v-btn>
         </div>
 
-        <div :class="[{'v-card br-20 ma-2': $vuetify.breakpoint.xs}, {'v-card br-20': !$vuetify.breakpoint.xs}]">
+        <div :class="[{'v-card br-20 ma-2': $vuetify.display.xs}, {'v-card br-20': !$vuetify.display.xs}]">
 
           <div class="title text-center textFaint--text pa-4">
             Account
@@ -145,7 +145,7 @@
 
         </div>
 
-        <div :class="[{'v-card br-20 mt-10': !$vuetify.breakpoint.xs}, {'mt-10 v-card': $vuetify.breakpoint.xs}]" v-if="sEthers.coinbase">
+        <div :class="[{'v-card br-20 mt-10': !$vuetify.display.xs}, {'mt-10 v-card': $vuetify.display.xs}]" v-if="sEthers.coinbase">
           <user-token-locks-controller></user-token-locks-controller>
         </div>
 

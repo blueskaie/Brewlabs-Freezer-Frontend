@@ -2,7 +2,7 @@
   <v-container style="max-width: 600px;">
     
     <v-slide-x-transition appear>
-      <div :class="['br-20 mb-16', {'pa-4': $vuetify.breakpoint.xs}, {'pa-6': !$vuetify.breakpoint.xs}]">
+      <div :class="['br-20 mb-16', {'pa-4': $vuetify.display.xs}, {'pa-6': !$vuetify.display.xs}]">
         
         <div class="mb-3 title text-center textFaint--text">
           Select Network

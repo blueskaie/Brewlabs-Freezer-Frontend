@@ -1,4 +1,3 @@
-import Vue from 'vue'
 import { createStore } from 'vuex'
 import themes from '@/plugins/themes.js'
 import ConnectProvider from '@/web3/connect-provider'
@@ -69,7 +68,7 @@ export const store = createStore({
       state.exchange = exchange
       var network = SETTINGS.AMMS[exchange].chain
       console.log(network)
-      Vue.prototype.$axios.defaults.baseURL = SETTINGS.AMMS[exchange].server
+      this.$axios.defaults.baseURL = SETTINGS.AMMS[exchange].server
 
       state.requiredNetwork = network
       state.requiredNetworkDisplayName = SETTINGS.CHAIN_DISPLAY_NAME[network]
@@ -113,8 +112,8 @@ export const store = createStore({
       state.user.permissions = keyObj.permissions
       state.user.jwtToken = loginObject.token
       localStorage.setItem('token', loginObject.token)
-      Vue.prototype.$userAxios.defaults.headers.common.Authorization = `Bearer ${loginObject.token}`
-      Vue.prototype.$axios.defaults.headers.common.Authorization = `Bearer ${loginObject.token}`
+      this.$userAxios.defaults.headers.common.Authorization = `Bearer ${loginObject.token}`
+      this.$axios.defaults.headers.common.Authorization = `Bearer ${loginObject.token}`
       // Watchlist copied from 'updateWatchlist'
       state.user.watchlistLastUpdated = Date.now()
       state.user.watchlist = loginObject.watchlist
@@ -124,8 +123,8 @@ export const store = createStore({
       state.user.username = null
       state.user.jwtToken = null
       state.user.jwtObject = {}
-      Vue.prototype.$userAxios.defaults.headers.common.Authorization = ``
-      Vue.prototype.$axios.defaults.headers.common.Authorization = ``
+      this.$userAxios.defaults.headers.common.Authorization = ``
+      this.$axios.defaults.headers.common.Authorization = ``
       localStorage.removeItem('token')
     },
     updateWatchlist (state, watchlist) {
@@ -164,7 +163,7 @@ export const store = createStore({
         network: state.requiredNetwork,
         state: 'pending'
       }
-      Vue.set(state.pendingTx.tx, txhash, item)
+      state.pendingTx.tx.txhash = item
     },
     completePendingTx (state, txhash) {
       state.pendingTx.pending = state.pendingTx.pending.filter(item => item !== txhash)

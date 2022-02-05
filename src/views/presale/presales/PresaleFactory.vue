@@ -1,5 +1,5 @@
 <template>
-  <v-container style="max-width: 600px;" :class="[{'pa-0': $vuetify.breakpoint.xs}]">
+  <v-container style="max-width: 600px;" :class="[{'pa-0': $vuetify.display.xs}]">
 
     <!--
     <div v-if="!sEthers.coinbase" class="py-3 px-2">
@@ -10,7 +10,7 @@
     </div>
     -->
 
-    <div :class="['mb-16', {'pa-4': $vuetify.breakpoint.xs}, {'v-card pa-8 br-20': !$vuetify.breakpoint.xs}]">
+    <div :class="['mb-16', {'pa-4': $vuetify.display.xs}, {'v-card pa-8 br-20': !$vuetify.display.xs}]">
       
       <div class="d-flex align-center">
 
@@ -24,7 +24,7 @@
         </v-btn>
       </div>
 
-      <div :class="['mb-5 mt-2 d-flex align-center pa-3 r-outlined br-c', {'foreground': $vuetify.breakpoint.xs}, {'inputcolor': !$vuetify.breakpoint.xs}]">
+      <div :class="['mb-5 mt-2 d-flex align-center pa-3 r-outlined br-c', {'foreground': $vuetify.display.xs}, {'inputcolor': !$vuetify.display.xs}]">
         <c-input :value="filters.search" placeholder="Search token name or address...">
         </c-input>
 

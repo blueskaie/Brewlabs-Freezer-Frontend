@@ -10,7 +10,7 @@
       class="ml-2 br-c primary-pulse">
     </div>
 
-    <div :class="[{'pa-6': !$vuetify.breakpoint.xs}, {'pa-4': $vuetify.breakpoint.xs}]">
+    <div :class="[{'pa-6': !$vuetify.display.xs}, {'pa-4': $vuetify.display.xs}]">
 
       <div>
 
@@ -169,7 +169,7 @@
       <div class="d-flex align-center">
         <coin-icon :url="presale.icon_url" :size="22" class="mr-2"></coin-icon>
         <v-btn text @click.stop="openTokenPage" class="title pa-0" style="min-width: 10px;">
-          <span :class="['text-truncate', `${textColor}--text`]" :style="$vuetify.breakpoint.xs ? 'max-width: 10ch;' : 'max-width: 20ch;'">
+          <span :class="['text-truncate', `${textColor}--text`]" :style="$vuetify.display.xs ? 'max-width: 10ch;' : 'max-width: 20ch;'">
             {{ presale.s_token.name }}
           </span>
           <v-icon small :color="textColor">mdi-chevron-up</v-icon>

@@ -3,7 +3,7 @@
     
     <!-- DESKTOP TOOLBAR -->
     <v-app-bar
-    v-if="$vuetify.breakpoint.mdAndUp"
+    v-if="$vuetify.display.mdAndUp"
     app
     flat
     height="80"
@@ -138,7 +138,7 @@
 
     </v-app-bar>
 
-    <v-main :class="['background', {'ima': showBackground && !$vuetify.breakpoint.xs}]">
+    <v-main :class="['background', {'ima': showBackground && !$vuetify.display.xs}]">
 
       <div v-if="!isMainnet && false" class="pa-2 text-center foreground border-b blue--text justify-center" style="">
         <div class="font-weight-bold">
@@ -147,8 +147,8 @@
         </div>
       </div>
 
-      <!-- <div v-if="darkMode && $vuetify.breakpoint.mdAndUp" class="radial-gr"></div> -->
-      <div v-if="darkMode" :class="[{'radial-gr': $vuetify.breakpoint.mdAndUp}, {'radial-gr-mobile': $vuetify.breakpoint.smAndDown}]"></div>
+      <!-- <div v-if="darkMode && $vuetify.display.mdAndUp" class="radial-gr"></div> -->
+      <div v-if="darkMode" :class="[{'radial-gr': $vuetify.display.mdAndUp}, {'radial-gr-mobile': $vuetify.display.smAndDown}]"></div>
       <!-- Keep alive Pairs? -->
 
       <router-view></router-view>
@@ -162,7 +162,7 @@
         fixed
         bottom
         right
-        :style="$vuetify.breakpoint.mobile ? 'bottom: 70px;' : 'bottom: 100px;'"
+        :style="$vuetify.display.mobile ? 'bottom: 70px;' : 'bottom: 100px;'"
         color="primary"
         @click="toTop"
         >
@@ -173,7 +173,7 @@
     </v-main>
 
     <!-- DESKTOP FOOTER -->
-    <v-footer v-if="$vuetify.breakpoint.mdAndUp" class="pa-4 justify-center foreground border-t">
+    <v-footer v-if="$vuetify.display.mdAndUp" class="pa-4 justify-center foreground border-t">
       <v-btn icon color="textFaint" x-large href="#" target="_blank">
         <v-icon>mdi-twitter</v-icon>
       </v-btn>
@@ -342,7 +342,6 @@ import ChainSwitcherDialog from '@/components/dialogs/chain-switcher-dialog'
 import SplashCampaignDialog from '@/components/dialogs/splash-campaign'
 import PROVIDERS from '@/web3/providers'
 import { ethers } from 'ethers'
-// import Vue from 'vue'
 import ArbitrageDialog from '@/views/arbitrage/dialog'
 
 export default {
@@ -432,7 +431,6 @@ export default {
 
   computed: {
     sEthers () {
-      console.log("asdfafd", this)
       return this.$store.state.ethers
     },
     wrongNetwork () {

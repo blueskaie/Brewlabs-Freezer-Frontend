@@ -7,7 +7,7 @@
         {{ $store.state.exchange }} Tokens <!--<span v-if="uniswapTokenCount"> {{ uniswapTokenCount }} </span> -->
       </div>
 
-      <div :class="['d-flex align-center pa-3 r-outlined br-c mx-2', {'inputcolor': $vuetify.breakpoint.xs}, {'inputcolor': !$vuetify.breakpoint.xs}]">
+      <div :class="['d-flex align-center pa-3 r-outlined br-c mx-2', {'inputcolor': $vuetify.display.xs}, {'inputcolor': !$vuetify.display.xs}]">
         <c-input :value="filters.search" placeholder="Token name or address..." class="">
         </c-input>
 
@@ -194,7 +194,7 @@
     <v-scroll-x-transition>
       <div v-if="!firstLoad">
 
-        <div :class="['d-flex align-center border-b border-t', $vuetify.breakpoint.xs ? 'px-2' : 'px-2']">
+        <div :class="['d-flex align-center border-b border-t', $vuetify.display.xs ? 'px-2' : 'px-2']">
           <token-chip v-for="tokenChip of tokenChips" :address="tokenChip.address" :icon="tokenChip.icon" :key="tokenChip.address"></token-chip>
           <v-spacer></v-spacer>
           <!-- PAGINATION -->

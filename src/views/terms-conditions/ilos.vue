@@ -2,7 +2,7 @@
   <v-container style="max-width: 800px;">
     
     <v-slide-y-transition appear>
-    <div :class="['mb-16', {'foreground v-card br-20': $vuetify.breakpoint.xs}, {'v-card br-20 foreground': !$vuetify.breakpoint.xs}]">
+    <div :class="['mb-16', {'foreground v-card br-20': $vuetify.display.xs}, {'v-card br-20 foreground': !$vuetify.display.xs}]">
       
       <div class="d-flex align-center pa-4 background">
         <v-btn icon to="/terms" color="text" class="mr-2">

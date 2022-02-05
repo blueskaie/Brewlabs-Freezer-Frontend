@@ -1,5 +1,5 @@
 <template>
-  <token-mobile v-if="$vuetify.breakpoint.xs" ref="tokenMobile"></token-mobile>
+  <token-mobile v-if="$vuetify.display.xs" ref="tokenMobile"></token-mobile>
   <token-desktop v-else ref="tokenDesktop"></token-desktop>
 </template>
 
@@ -18,7 +18,7 @@ export default {
 
   methods: {
     open (token, network = null, exchange = null) {
-      if (this.$vuetify.breakpoint.xs) {
+      if (this.$vuetify.display.xs) {
         this.$refs.tokenMobile.open(token, network, exchange)
       } else {
         this.$refs.tokenDesktop.open(token, network, exchange)
