@@ -25,7 +25,7 @@
     "vue-clipboard2": "^0.3.1",
     "vue-disqus": "^4.0.1",
     "vue-router": "^4.0.12",
-    "vuetify": "^3.0.0-alpha.0",
+    "vuetify": "^2.5.2",
     "vuex": "^4.0.2",
     "walletlink": "^2.1.3"
   },

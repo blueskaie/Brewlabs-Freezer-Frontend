@@ -1,4 +1,4 @@
-import 'vuetify/lib/styles/main.sass'
+import 'vuetify/dist/vuetify.min.css'
 import { createVuetify } from 'vuetify'
 import themes from '@/plugins/themes.js'
 
