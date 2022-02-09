@@ -2,8 +2,6 @@
 
   <div>
 
-    <v-icon size="180" style="color: var(--v-background-base)!important; position: absolute; right: -30px; top: -30px;">mdi-arrow-up-circle-outline</v-icon>
-
     <div style="position: relative;">
 
       <div class="display-1 textFaint--text font-weight-bold mb-8">

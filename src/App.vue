@@ -195,7 +195,7 @@
         <div>
           <img 
           src="@/assets/img/unicrypt_network.png" 
-          height="160px"
+          height="320px"
           width="320px">
           <div v-if="false" class="textFaint--text" style="letter-spacing: 0.5rem!important;">
             DEFI SERVICES

@@ -5,7 +5,7 @@
         <v-row class="pa-4 ma-0 font-weight-medium background align-center">
           <div>
             <div class="caption textFaint--text">
-              Unicrypt Version 1.03
+              BrewlabsFreezer
             </div>
             Connect your wallet
           </div>
@@ -62,7 +62,7 @@
 
         <div class="caption textFaint--text pa-4 d-flex align-center">
           <v-icon small color="textFaint" class="mr-2">mdi-star-outline</v-icon>
-          Unicrypt works best with Metamask on all chains.
+          BrewlabsFreezer works best with Metamask on all chains.
         </div>
 
         <!-- Main content -->

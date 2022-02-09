@@ -2,8 +2,6 @@
 
   <div>
 
-    <v-icon size="120" style="color: var(--v-background-base)!important; position: absolute; right: 30px; top: 0px;">mdi-lock-outline</v-icon>
-
     <div style="position: relative;">
 
       <div class="d-flex align-center title font-weight-bold mb-4">

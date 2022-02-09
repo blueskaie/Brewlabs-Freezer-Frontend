@@ -43,6 +43,14 @@
                 <span>Frozen Pairs</span>
               </div>
             </router-link>
+            <router-link 
+            :to="`${$store.state.ammPrefix}/pairs`"
+            v-slot="{ isActive, navigate }">
+              <div :class="['top-tab', {'active': isActive}]" @click="navigate">
+                <v-icon size="20" class="mr-1">mdi-checkbox-multiple-blank-circle-outline</v-icon>
+                <span>Team lockers</span>
+              </div>
+            </router-link>
           </div>
 
         </div>

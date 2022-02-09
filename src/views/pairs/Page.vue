@@ -29,8 +29,6 @@
 
       <div class="pt-10 pb-3 pl-2 pr-2" style="min-height: 160px; position: relative;">
 
-        <v-icon size="130" style="color: var(--v-background-base)!important; position: absolute; left: -30px; top: 20px;">mdi-lock-outline</v-icon>
-
         <div style="position: relative;">
 
           <div v-if="lock_stats.tval" class="text-center caption">
