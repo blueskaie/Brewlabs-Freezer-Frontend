@@ -204,7 +204,7 @@
             size="130"
             color="#aaa">
               <img 
-              src="@/assets/img/BF_fill.png" 
+              src="@/assets/img/BF_fill.svg" 
               height="120px"
               class="greyscale"
               width="120px">

@@ -7,7 +7,7 @@
       size="70"
       color="#aaa">
         <img 
-        src="@/assets/img/BF_fill.png" 
+        src="@/assets/img/BF_fill.svg" 
         height="60px"
         width="60px"
         class="greyscale">

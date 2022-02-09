@@ -28,7 +28,7 @@
         width="2"
         color="#aaa">
           <img 
-          src="@/assets/img/BF_fill.png" 
+          src="@/assets/img/BF_fill.svg" 
           height="110px"
           class="greyscale"
           width="110px">

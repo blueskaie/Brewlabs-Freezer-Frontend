@@ -85,31 +85,6 @@
                 </div>
               </div>
 
-              <v-row dense class="ma-0 background">
-                <v-col cols="6">
-                  <v-btn rounded text class="textFaint--text d-flex align-center pa-2 font-weight-regular" @click="expandCoinBalances = !expandCoinBalances">
-                    <img 
-                    src="@/assets/img/UNCL.svg" 
-                    height="24px"
-                    width="24px"
-                    class="mr-2">
-                    {{ unclBalanceHuman.combined }} UNCL
-                    <v-icon small :class="[{'rotate-180': expandCoinBalances}]">mdi-chevron-down</v-icon>
-                  </v-btn>
-                </v-col>
-                <v-col cols="6">
-                  <v-btn rounded text class="textFaint--text d-flex align-center pa-2 font-weight-regular" @click="expandCoinBalances = !expandCoinBalances">
-                    <img 
-                    src="@/assets/img/BF_fill.png" 
-                    height="24px"
-                    width="24px"
-                    class="mr-2">
-                    {{ uncxBalanceHuman.combined }} UNCX
-                    <v-icon small :class="[{'rotate-180': expandCoinBalances}]">mdi-chevron-down</v-icon>
-                  </v-btn>
-                </v-col>
-              </v-row>
-
               <v-expand-transition>
                 <div v-if="expandCoinBalances">
                   <v-row dense class="ma-0 px-2 pb-4 caption background">

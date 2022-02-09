@@ -11,15 +11,16 @@
     class="pr-3"
     color="foreground"
     >
-      <v-toolbar-title v-if="true" class="d-flex align-center font-weight-bold" href="#">
-        <img 
-        v-if="true"
-        src="@/assets/img/BF_fill.png"
-        height="40px"
-        width="40px"
-        class="mr-2">
-
-        <div v-if="true" class="mr-6" style="font-size: 1.2rem;">
+      <v-toolbar-title v-if="true" class="d-flex align-center font-weight-bold">
+        <router-link :to="`/`">
+          <img 
+            v-if="true"
+            src="@/assets/img/BF_fill.svg"
+            height="40px"
+            width="40px"
+            class="mr-2">
+        </router-link>
+        <div v-if="true" class="mr-3 ml-3" style="font-size: 1.2rem;">
           BrewlabsFreezer
         </div>
       </v-toolbar-title>
@@ -171,74 +172,6 @@
       </v-fab-transition>
 
     </v-main>
-
-    <!-- DESKTOP FOOTER -->
-    <v-footer v-if="$vuetify.breakpoint.mdAndUp" class="pa-4 justify-center foreground border-t">
-      <v-btn icon color="textFaint" x-large href="#" target="_blank">
-        <v-icon>mdi-twitter</v-icon>
-      </v-btn>
-      <v-btn color="textFaint" x-large icon rounded href="#" target="_blank">
-        <v-icon>mdi-telegram</v-icon>
-      </v-btn>
-      <v-btn text rounded target="_blank" href="#">
-        Docs
-      </v-btn>
-      <v-btn text rounded to="/terms" exact>
-        Terms and Conditions
-      </v-btn>
-      <v-btn text rounded to="/terms/privacy-policy">
-        Privacy Policy
-      </v-btn>
-      <v-btn text rounded target="_blank" href="#">
-        brewlabs.network
-      </v-btn>
-      <!--
-      <v-btn text rounded target="_blank" href="#">
-        Terms and conditions
-      </v-btn>
-      -->
-    </v-footer>
-    <!-- END DESKTOP FOOTER -->
-
-    <!-- MOBILE FOOTER -->
-    <v-footer v-else app fixed class="justify-center pa-0 foreground border-t">
-
-      <v-bottom-navigation
-        color="primary"
-        grow
-        class="align-center midground"
-        style=""
-      >
-
-        <v-btn to="/amm" @click.stop="clickBrowserButton">
-          <span class="font-weight-medium">BROWSER</span>
-          <v-icon>mdi-checkbox-blank-circle-outline</v-icon>
-        </v-btn>
-
-        <v-btn to="/services">
-          <span class="font-weight-medium">SERVICES</span>
-          <v-icon>mdi-checkbox-multiple-blank-circle-outline</v-icon>
-        </v-btn>
-
-        <v-btn :to="`${$store.state.chainPrefix}/farms`">
-          <span class="font-weight-medium">FARMS</span>
-          <v-icon>mdi-sprout-outline</v-icon>
-        </v-btn>
-
-        <v-btn to="/account">
-          <span class="font-weight-medium">ACCOUNT</span>
-          <v-icon v-if="signedIn">mdi-account-outline</v-icon>
-          <v-icon v-else>mdi-account-outline</v-icon>
-        </v-btn>
-
-        <v-btn v-if="$store.state.superUserMode" :to="`${$store.state.ammPrefix}/sajfkhflkjasdlisdulansdlakds`">
-          <span>Super</span>
-          <v-icon>mdi-atom</v-icon>
-        </v-btn>
-      </v-bottom-navigation>
-
-    </v-footer>
-    <!-- END MOBILE FOOTER -->
 
     <main-menu ref="mainMenu"></main-menu>
 
@@ -659,7 +592,7 @@ export default {
   pointer-events: none;
   height: 200vh;
   mix-blend-mode: color;
-  background: radial-gradient(50% 50% at 50% 50%, rgba(33, 114, 229, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+  // background: radial-gradient(50% 50% at 50% 50%, rgba(33, 114, 229, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
   position: fixed;
   top: 0px;
   left: 0px;
@@ -672,7 +605,7 @@ export default {
   pointer-events: none;
   height: 200vh;
   mix-blend-mode: color;
-  background: radial-gradient(50% 50% at 50% 50%, rgba(33, 114, 229, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+  // background: radial-gradient(50% 50% at 50% 50%, rgba(33, 114, 229, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
   position: fixed;
   top: 0px;
   left: 0px;

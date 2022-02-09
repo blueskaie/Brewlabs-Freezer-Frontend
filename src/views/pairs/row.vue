@@ -97,7 +97,7 @@
           <div class="outline flex" style="height: 2px"></div>
           <img 
           v-if="true"
-          src="@/assets/img/BF_fill.png"
+          src="@/assets/img/BF_fill.svg"
           height="60px"
           width="60px"
           class="mx-1">

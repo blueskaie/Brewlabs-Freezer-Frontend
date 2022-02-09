@@ -4,7 +4,7 @@
     <div class="d-flex border-b foreground border mb-2 br-20" style="overflow: hidden;">
       <div :class="['d-flex align-center flex pa-3 c-list top-tab', {'background': tab === 0}]" @click="tab = 0">
         <img 
-        src="@/assets/img/BF_fill.png" 
+        src="@/assets/img/BF_fill.svg" 
         height="30px"
         width="30px"
         class="mr-1">
@@ -77,7 +77,7 @@
 
       <div class="d-flex align-center">
         <img 
-        src="@/assets/img/BF_fill.png" 
+        src="@/assets/img/BF_fill.svg" 
         :height="imageSize"
         :width="imageSize">
         <div class="ml-3 flex">

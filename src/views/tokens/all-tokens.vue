@@ -184,7 +184,7 @@
       width="3"
       color="#aaa">
         <img 
-        src="@/assets/img/BF_fill.png"
+        src="@/assets/img/BF_fill.svg"
         class="greyscale"
         height="70px"
         width="70px">
