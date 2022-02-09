@@ -11,20 +11,20 @@
     class="pr-3"
     color="foreground"
     >
-      <v-toolbar-title v-if="true" class="d-flex align-center font-weight-bold">
-        <router-link :to="`/`">
-          <img 
-            v-if="true"
-            src="@/assets/img/BF_fill.svg"
-            height="40px"
-            width="40px"
-            class="mr-2">
-        </router-link>
-        <div v-if="true" class="mr-3 ml-3" style="font-size: 1.2rem;">
-          BrewlabsFreezer
-        </div>
-      </v-toolbar-title>
+        <router-link :to="`/`" class="text-decoration-none">
+          <v-toolbar-title v-if="true" class="d-flex align-center font-weight-bold">
 
+              <img 
+                v-if="true"
+                src="@/assets/img/BF_fill.svg"
+                height="40px"
+                width="40px"
+                class="mr-2">
+              <div v-if="true" class="mr-1 ml-1" style="font-size: 1.2rem;">
+                Brewlabs Freezer
+              </div>
+          </v-toolbar-title>
+        </router-link>
       <v-spacer></v-spacer>
       <tx-spinner></tx-spinner>
       
